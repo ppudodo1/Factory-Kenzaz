@@ -1,0 +1,116 @@
+$primary-color: #4D4382;
+$secondary-color: #252525;
+$max-width:940px;
+$container-height:53px;
+
+* {
+  font-family: "Bitter", serif;
+}
+
+.logo-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.header-outside-container {
+  background-color: $secondary-color;
+}
+
+.header-inside-top-container {
+  max-width: $max-width;
+  background-color: $secondary-color;
+  display: flex;
+  justify-content: space-between;
+  height: $container-height;
+  margin: 0 auto;
+}
+.header-inside-bottom {
+  background-color: $primary-color;
+}
+.header-inside-bottom-container {
+  max-width: $max-width;
+  background-color: $primary-color;
+  display: flex;
+  margin: 0 auto;
+  height: $container-height;
+}
+.button-link {
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background-color: $primary-color;
+  color: white;
+  border-bottom: 3px solid;
+  overflow: hidden;
+  z-index: 0;
+  font-size: 18px;
+  line-height: 21.6px;
+  font-weight: 700;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--hover-color);
+    z-index: -1;
+    transition: top 0.3s ease-in-out;
+  }
+  
+  &:hover::after {
+    top: 0;
+  }
+}
+
+.top-link-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.top-link-container a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 27px;
+}
+
+.search-icon {
+  background-color: #303030;
+  width: 62px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: $container-height;
+}
+
+.header-title {
+  color: white;
+  margin-top: 20px;
+  font-size: 24px;
+  line-height: 27px;
+  font-weight: 400;
+  text-decoration: none;
+}
+.header-link {
+  text-decoration: none;
+}
+.inner-logo {
+  background-color: #303030;
+  width: 62px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: $container-height;
+}
+.top-link:hover{
+    color: $primary-color;
+}
