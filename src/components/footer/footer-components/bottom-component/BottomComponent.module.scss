@@ -1,0 +1,59 @@
+$font-family: "Bitter", serif;
+$container-width: 940px;
+$margin-auto: 0 auto;
+$margin-bottom: 20px;
+$text-align-left: left;
+$color-gray: #666666;
+$color-light-gray: #CCCCCC;
+
+* {
+  font-family: $font-family;
+}
+
+.footer-bottom-outer-container {
+  display: flex;
+  width: $container-width;
+  margin: $margin-auto;
+}
+
+.featured-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; // 'left' is not a valid value for justify-content
+  margin-right: 1rem;
+}
+
+.featured-container h2 {
+  text-align: $text-align-left;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28.8px;
+  margin-bottom: $margin-bottom;
+}
+
+.twitter-feed {
+  height: 94px;
+}
+
+.twitter-container h2 {
+  margin-bottom: $margin-bottom;
+  text-align: $text-align-left;
+}
+
+.twitter-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.twitter-tag {
+  font-size: 14px;
+  color: $color-gray;
+  text-align: $text-align-left;
+}
+
+.twitter-desc {
+  font-size: 13px;
+  color: $color-light-gray;
+  text-align: $text-align-left;
+  width: 326px;
+}

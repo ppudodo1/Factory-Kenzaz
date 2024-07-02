@@ -1,0 +1,109 @@
+$max-width-container:940px;
+$kenzaz-title-clr: #45B0E3;
+*{
+    font-family: "Bitter", serif;
+}
+.footer-top-outer-container{
+    display: flex;
+    gap: 1rem;
+    max-width: $max-width-container;
+    margin: 0 auto;
+}
+
+.kenaz-image-container{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.kenaz-image-container h2{
+    color: $kenzaz-title-clr;
+    font-weight: 400;
+    font-size: 29.62px;
+    line-height: 51.81px;
+}
+.kenaz-text-par{
+    color: #666666;
+    text-align: left;
+    width: 303px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+.newsletter-container h2{
+    color: #CCCCCC;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28.8px;
+    text-align: left;
+    margin-top: 20px;
+}
+.newsletter-container p{
+    color: #666666;
+    text-align: left;
+    width: 303px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+.newsletter-container input{
+    width: 173px;
+    height: 43px;
+    padding-left: 20px;
+    border: none;
+    outline: none;
+    background-color: #333333;
+    color: #999999;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: "Varela Round", sans-serif;
+}
+
+.newsletter-container button{
+    width: 112px;
+    height: 43px;
+    background-color:#4D4382;
+    border: none;
+    outline: none;
+    color: #CCCCCC;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: "Varela Round", sans-serif;
+}
+.input-container{
+    display: flex;
+}
+.icon-container{
+    
+    display: flex;
+    gap: 5px;
+}
+.tags-container h2{
+    color: #CCCCCC;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28.8px;
+    text-align: left;
+    margin-top: 20px;
+}
+.tags-container button{
+
+    padding: 7px;
+    border: none;
+    background-color: #333333;
+    color: #666666;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+.tags-container button:hover{
+    background-color: #4D4382;
+    color: #CCCCCC;
+}
+.tags-button-container{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}

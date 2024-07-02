@@ -1,0 +1,25 @@
+$background-clr: #252525;
+$txt-color: white;
+$max-width-container:940px;
+
+.footer-styles{
+    background-color: $background-clr;
+    color: $txt-color;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  
+}
+.footer-template{
+    width: $max-width-container;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-styles p{
+    color: #999999;
+    font-family: "Valera Round";
+    font-size: 12px;
+}
