@@ -6,7 +6,7 @@ $max-width-container:940px;
     background-color: $background-clr;
     color: $txt-color;
     text-align: center;
-    padding: 10px;
+  
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -22,4 +22,9 @@ $max-width-container:940px;
     color: #999999;
     font-family: "Valera Round";
     font-size: 12px;
+}
+.purple-divider{
+    width: 100%;
+    height: 23px;
+    background-color: #4D4382;
 }

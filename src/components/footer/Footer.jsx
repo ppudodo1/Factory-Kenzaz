@@ -5,6 +5,9 @@ import BotttomComponent from './footer-components/bottom-component/BotttomCompon
 const Footer = () => {
   return (
     <div className={styles['footer-styles']}>
+      <div className={styles['purple-divider']}>
+
+      </div>
       <TopComponent> </TopComponent>
       <BotttomComponent></BotttomComponent>
       <hr />

@@ -1,0 +1,11 @@
+ .slick-next {
+    z-index: 1; 
+   
+    position: absolute;
+    top: 40%;
+   right: 3%;
+}
+.slick-prev:before,
+.slick-next:before {
+    content: '' !important; 
+}

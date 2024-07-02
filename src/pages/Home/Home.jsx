@@ -9,7 +9,7 @@ const Home = () => {
     <div className = {styles['site-content']}>
         <Header></Header>
         <Banner></Banner>
-        
+        <InfiniteSlider></InfiniteSlider>
         <div className={styles['spacing']}>
           
         </div>

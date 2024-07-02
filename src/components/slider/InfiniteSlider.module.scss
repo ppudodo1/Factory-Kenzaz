@@ -1,0 +1,60 @@
+.slider-container{
+    width: 940px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.slider-item-container{
+    position: relative;
+}
+.slider-txt-container{
+    position: absolute;
+    bottom: 0px;
+    padding-bottom: 20px;
+    z-index: 1;
+    background-image: url('../../assets/logos/Layer31.png');
+    background-position: center;
+    width: 100%;
+    
+    
+}
+.slick-prev, .slick-next {
+    z-index: 1; 
+    background-color: red;
+}
+.slick-prev:before,
+.slick-next:before {
+    background-color: red;
+    content: '' !important; 
+}
+.slider-par-container{
+    display: flex;
+    gap: 1rem;
+    position: relative;
+    left: 2%;
+}
+.slider-par-container p{
+    color: #EEF6FA;
+    font-size: 12px;
+    font-family: "Valera Round",sans-serif;
+    font-weight: 400;
+    line-height: 14.45px;
+} 
+.slider-title-container{
+    position: relative;
+    left: 2%;
+    width: 558px;
+}
+.slider-title-container h1{
+    color: #EEF6FA;
+    font-size: 34px;
+    font-weight: 700;
+}
+.slider-title-container button{
+    width: 123px;
+    height: 33px;
+    background: none;
+    outline: none;
+    border: 1px solid #EEF6FA;
+    color: #EEF6FA;
+    font-size: 14px;
+}

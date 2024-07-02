@@ -1,0 +1,14 @@
+.slick-prev {
+    z-index: 1; 
+   
+    position: absolute;
+    top: 40%;
+    left: 2%;
+  }
+
+  
+  .slick-prev:before,
+  .slick-next:before {
+   
+    content: '' !important; 
+  }
