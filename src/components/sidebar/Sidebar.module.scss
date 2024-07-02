@@ -1,0 +1,27 @@
+.sidebar-container{
+    margin-top: 20px;
+    background-color: #4D4382;
+    width: 300px;
+    height: 700px;
+}
+.sidebar-title{
+    background-color: #3E3668;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.sidebar-title a{
+    color: white;
+    font-family: "Varela Round";
+    font-size: 14px;
+    font-weight: 400;
+}
+.sidebar-title a:hover{
+    color: #FCC44D;
+}
+.sidebar-content{
+    
+    padding: 20px;
+}

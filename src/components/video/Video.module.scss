@@ -1,0 +1,28 @@
+.video-container {
+    width: 300px;
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+}
+.video-container p,h1{
+    padding-left: 20px;
+}
+.video-container h1{
+    margin-bottom: 30px;
+}
+.video-container p:first-of-type{
+    font-size: 12px;
+    font-weight: 400;
+    color: #666666;
+    font-family: "Varela Round";
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.video-container p:nth-last-of-type(2){
+    font-size: 14px;
+    font-weight: 700;
+    color: #363F48;
+    font-family: "Bitter";
+ 
+}

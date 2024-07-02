@@ -6,7 +6,6 @@ import styles from "./InfiniteSlider.module.scss"
 import sliderImage from "../../assets/logos/Layer48.png"
 import LeftArrow from './arrows/leftArrow/LeftArrow';
 import RightArrow from './arrows/rightArrow/RightArrow';
-
 const InfiniteSlider = () => {
     const settings = {
         infinite: true,

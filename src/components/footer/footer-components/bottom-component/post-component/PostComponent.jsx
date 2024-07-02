@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from "./PostComponent.module.scss";
 import image from "../../../../../assets/logos/Layer63.png"
-const PostComponent = () => {
+const PostComponent = ({textColor}) => {
   return (
     <div className={styles['post-outer-container']}>
        <div className={styles['text-container']}>

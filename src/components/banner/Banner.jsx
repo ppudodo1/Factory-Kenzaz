@@ -1,8 +1,9 @@
 import React from 'react'
 import styles from "./Banner.module.scss";
-const Banner = () => {
+const Banner = ({width,height,center,top}) => {
   return (
-    <div className={styles['banner-container']}>
+    <div className={styles['banner-container']} style={{ height: `${height}px`, width: `${width}px`, margin: `0 ${center}`,marginTop:  `${top}px` }}>
+
         
     </div>
   )
