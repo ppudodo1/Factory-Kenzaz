@@ -10,6 +10,9 @@ import Social from '../../components/social/Social';
 import Video from '../../components/video/Video';
 import Facebook from '../../components/facebook/Facebook';
 import NewsSlider from '../../components/newsSlider/NewsSlider';
+import Editorials from '../../components/editorials/Editorials';
+
+
 const Home = () => {
   return (
     <div className = {styles['site-content']}>
@@ -24,7 +27,13 @@ const Home = () => {
             <CategoryCard type={"Bussines"}></CategoryCard>
             <Banner width={620} height={120}></Banner>
             <NewsSlider></NewsSlider>
+            <div className={styles["editorials-container"]}>
+              <Editorials title={"Editorials"}></Editorials>
+              <Editorials title={"Local News"}></Editorials>
+            </div>
+          
           </div>
+         
           <div className={styles['big-right-container']}>
             <Sidebar></Sidebar>
             <Social></Social>
@@ -35,7 +44,9 @@ const Home = () => {
             </div>
             <Facebook></Facebook>
           </div>
+          
         </div>
+        <Banner width={940} height={120} center={"auto"} top={20}></Banner>
         <div className={styles['spacing']}></div>
       
         <Footer></Footer>
