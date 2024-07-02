@@ -11,7 +11,7 @@ import Video from '../../components/video/Video';
 import Facebook from '../../components/facebook/Facebook';
 import NewsSlider from '../../components/newsSlider/NewsSlider';
 import Editorials from '../../components/editorials/Editorials';
-
+import PagingSlider from '../../components/pagingSlider/PagingSlider';
 
 const Home = () => {
   return (
@@ -47,6 +47,7 @@ const Home = () => {
           
         </div>
         <Banner width={940} height={120} center={"auto"} top={20}></Banner>
+       
         <div className={styles['spacing']}></div>
       
         <Footer></Footer>

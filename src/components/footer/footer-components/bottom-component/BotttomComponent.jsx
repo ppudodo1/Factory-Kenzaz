@@ -7,16 +7,16 @@ const BotttomComponent = () => {
         <div className={styles['featured-container']}>
           
             <h2>Featured</h2>
-            <PostComponent></PostComponent>
-            <PostComponent></PostComponent>
-            <PostComponent></PostComponent>    
+            <PostComponent check={"footer"}></PostComponent>
+            <PostComponent check={"footer"}></PostComponent>
+            <PostComponent check={"footer"}></PostComponent>    
         </div>
         <div className={styles['featured-container']}>
           
             <h2>Random Posts</h2>
-            <PostComponent></PostComponent>
-            <PostComponent></PostComponent>
-            <PostComponent></PostComponent>    
+            <PostComponent check={"footer"}></PostComponent>
+            <PostComponent check={"footer"}></PostComponent>
+            <PostComponent check={"footer"}></PostComponent>    
         </div>
         <div className={styles['twitter-container']}>
             <h2>Twitter Feed</h2>

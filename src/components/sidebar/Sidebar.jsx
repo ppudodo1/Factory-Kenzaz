@@ -10,12 +10,12 @@ const Sidebar = () => {
         <a href="">Comments</a>
       </div>
       <div className={styles['sidebar-content']}>
-        <PostComponent></PostComponent>
-        <PostComponent></PostComponent>
-        <PostComponent></PostComponent>
-        <PostComponent></PostComponent>
-        <PostComponent></PostComponent>
-        <PostComponent></PostComponent>
+        <PostComponent check={"sidebar"}></PostComponent>
+        <PostComponent check={"sidebar"}></PostComponent>
+        <PostComponent check={"sidebar"}></PostComponent>
+        <PostComponent check={"sidebar"}></PostComponent>
+        <PostComponent check={"sidebar"}></PostComponent>
+        <PostComponent check={"sidebar"}></PostComponent>
     
       </div>
     </div>

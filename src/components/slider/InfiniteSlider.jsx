@@ -58,7 +58,6 @@ const InfiniteSlider = () => {
             <button>Read article</button>
           </div>
         </div>
-       
       </div>
     </Slider>
   </div>
