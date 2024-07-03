@@ -1,0 +1,19 @@
+.numeration-container{
+    background-color: white;
+    padding: 20px;
+}
+.numbers-container button{
+ width: 32px;
+ height: 32px;
+ border: none;
+ margin-right: 5px;
+ background-color: #DDDDDD;
+ transition: 0.2s all;
+ font-family: "Varela Round";
+ font-weight: 400;
+ font-size: 14px;
+}
+.numbers-container button:hover{
+    background-color: #4D4382;
+    color: white;
+}
