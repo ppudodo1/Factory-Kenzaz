@@ -1,56 +1,56 @@
-.news-container{
-    background-color: white;
-    padding: 30px;
-    border-bottom: 2px solid #DDDDDD;
+.news-container {
+  background-color: white;
+  padding: 30px;
+  border-bottom: 2px solid #dddddd;
 }
-.news-container h1{
-    font-family: "Bitter";
-    font-weight: 700;
-    font-size: 24px;
-    color: #363F48;
-    width: 496px;
+.news-container h1 {
+  font-family: "Bitter";
+  font-weight: 700;
+  font-size: 24px;
+  color: #363f48;
+  width: 496px;
 }
-.news-container:nth-of-type(1){
-    margin-top: 20px;
+.news-container:nth-of-type(1) {
+  margin-top: 20px;
 }
-.article-container{
-    display: flex;
-    gap: 20px;
+.article-container {
+  display: flex;
+  gap: 20px;
 }
-.article-image-container{
-    width: 30%;
+.article-image-container {
+  width: 30%;
 }
-.article-text-container{
-    width: 70%;
-    margin-bottom: 50px;
+.article-text-container {
+  width: 70%;
+  margin-bottom: 50px;
 }
-.article-text-container button{
-    border: none;
-    background-color: #4D4382;
-    color: white;
-    width: 123px;
-    height: 33px;
-    font-family: "Varela Round";
-    font-weight: 400;
-    font-size: 14px;
-    margin-top: 20px;
+.article-text-container button {
+  border: none;
+  background-color: #4d4382;
+  color: white;
+  width: 123px;
+  height: 33px;
+  font-family: "Varela Round";
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 20px;
 }
-.article-text-container p{
-    font-family: "Bitter";
-    font-weight: 400;
-    font-size: 14px;
-    color: #444444;
+.article-text-container p {
+  font-family: "Bitter";
+  font-weight: 400;
+  font-size: 14px;
+  color: #444444;
 }
-.info-container{
-    display: flex;
-    justify-content: space-between;
-    width: 60%;
+.info-container {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
 }
-.info-container p{
-    font-size: 12px;
-    font-weight: 400;
-    font-family: "Varela Round";
-    color: #666666;
-    margin-bottom: 20px;
-    margin-top: 10px;
+.info-container p {
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "Varela Round";
+  color: #666666;
+  margin-bottom: 20px;
+  margin-top: 10px;
 }

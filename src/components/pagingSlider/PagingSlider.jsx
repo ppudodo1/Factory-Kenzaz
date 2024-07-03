@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef } from "react";
 import styles from "./PagingSlider.module.scss";
 import Slider from "react-slick";
 import image1 from "../../assets/logos/stock1.jpg";
@@ -13,8 +13,8 @@ import search from "../../assets/logos/search.png";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./PagingSliderCustom.scss";
-import LeftArrow from '../slider/arrows/leftArrow/LeftArrow';
-import RightArrow from '../slider/arrows/rightArrow/RightArrow';
+import LeftArrow from "../slider/arrows/leftArrow/LeftArrow";
+import RightArrow from "../slider/arrows/rightArrow/RightArrow";
 
 const PagingSlider = () => {
   const images = [image1, image2, image3, image4, image5, image6, image7];
@@ -73,7 +73,11 @@ const PagingSlider = () => {
 
       <Slider ref={sliderRef} {...settings}>
         {images.map((image, index) => (
-          <div key={index} className={styles["slider-item"]} onClick={() => handleImageClick(image)}>
+          <div
+            key={index}
+            className={styles["slider-item"]}
+            onClick={() => handleImageClick(image)}
+          >
             <img src={image} alt="" />
           </div>
         ))}

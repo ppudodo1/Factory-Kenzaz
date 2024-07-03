@@ -1,7 +1,7 @@
-$primary-color: #4D4382;
+$primary-color: #4d4382;
 $secondary-color: #252525;
-$max-width:940px;
-$container-height:53px;
+$max-width: 940px;
+$container-height: 53px;
 
 * {
   font-family: "Bitter", serif;
@@ -51,9 +51,9 @@ $container-height:53px;
   font-size: 18px;
   line-height: 21.6px;
   font-weight: 700;
-  
+
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 100%;
     left: 0;
@@ -63,7 +63,7 @@ $container-height:53px;
     z-index: -1;
     transition: top 0.3s ease-in-out;
   }
-  
+
   &:hover::after {
     top: 0;
   }
@@ -111,6 +111,6 @@ $container-height:53px;
   align-items: center;
   height: $container-height;
 }
-.top-link:hover{
-    color: $primary-color;
+.top-link:hover {
+  color: $primary-color;
 }

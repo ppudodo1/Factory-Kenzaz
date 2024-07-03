@@ -1,56 +1,53 @@
 .slider-container {
-   
-    margin-top: 20px;
-    background-color: white;
-    border-left: 13px solid #A99765;
-    height: 332px;
-   width: 46%;
+  margin-top: 20px;
+  background-color: white;
+  border-left: 13px solid #a99765;
+  height: 332px;
+  width: 46%;
 }
-.slider-container h1{
-    padding: 20px;
-    padding-bottom: 0px;
-    margin-bottom: 30px;
-    font-size: 24px;
+.slider-container h1 {
+  padding: 20px;
+  padding-bottom: 0px;
+  margin-bottom: 30px;
+  font-size: 24px;
 }
 .item-container {
-    height: 250px;
-    width: 100%; 
-    margin: 0 auto;
+  height: 250px;
+  width: 100%;
+  margin: 0 auto;
 }
-.item{
-    margin: 0 auto;
-    width: 85%;
+.item {
+  margin: 0 auto;
+  width: 85%;
 }
-.item img{
-    width: 230px;
-    height: 150px;
+.item img {
+  width: 230px;
+  height: 150px;
 }
-.slider-controls{
-    display: flex;
-   justify-content: space-between;
-   align-items: center;
-   
-   width: 89%;
-    
+.slider-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 89%;
 }
-.slider-controls button{
-    background-color: white;
-    border: none;
-   
+.slider-controls button {
+  background-color: white;
+  border: none;
 }
-.slider-controls button:first-of-type{
-    margin-right: 15px;
+.slider-controls button:first-of-type {
+  margin-right: 15px;
 }
-.slider-txt-container p:first-of-type{
-    font-family: "Varela Round";
-    font-size: 12px;
-    font-weight: 400;
-    margin-top: 5px;
-    margin-bottom: 5px;
+.slider-txt-container p:first-of-type {
+  font-family: "Varela Round";
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
-.slider-txt-container p:nth-of-type(2){
-    font-family: "Bitter";
-    font-size: 14px;
-    font-weight: 700;
-    color: #363F48;
+.slider-txt-container p:nth-of-type(2) {
+  font-family: "Bitter";
+  font-size: 14px;
+  font-weight: 700;
+  color: #363f48;
 }
