@@ -33,7 +33,6 @@ const Home = () => {
             </div>
           
           </div>
-         
           <div className={styles['big-right-container']}>
             <Sidebar></Sidebar>
             <Social></Social>
@@ -44,12 +43,9 @@ const Home = () => {
             </div>
             <Facebook></Facebook>
           </div>
-          
         </div>
         <Banner width={940} height={120} center={"auto"} top={20}></Banner>
-       
-        <div className={styles['spacing']}></div>
-      
+        <PagingSlider></PagingSlider>
         <Footer></Footer>
     </div>
   )
