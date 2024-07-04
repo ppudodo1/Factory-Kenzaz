@@ -3,6 +3,7 @@ import styles from "./CategoryCard.module.scss";
 import backgroundImage from "../../assets/logos/Layer59.png";
 import SingleNews from "../singleNews/SingleNews";
 const CategoryCard = ({ title, borderColor, numberOfNews }) => {
+  console.log("Testing branch");
   return (
     <main
       className={`${styles["news-card"]} ${styles["card-container"]}`}
