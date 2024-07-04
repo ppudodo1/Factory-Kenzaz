@@ -13,7 +13,7 @@ const CategoryCard = ({ title, borderColor, numberOfNews }) => {
       <div className={styles["outer-div-card"]}>
         <div className={styles["card-text"]}>
           <h1>{title}</h1>
-          <a href="">See all</a>
+          <a href="/single">See all</a>
         </div>
         <div className={styles["small-card-container"]}>
           {[...Array(numberOfNews)].map((_, index) => (

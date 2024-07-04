@@ -1,0 +1,61 @@
+.hero-container {
+  width: 940px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.hero-item-container {
+  position: relative;
+}
+.slider-txt-container {
+  position: absolute;
+  bottom: 0px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  z-index: 1;
+  /*background-image: url('../../assets/logos/Layer31.png');
+      background-position: center;*/
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0.9) 30%,
+    rgba(255, 255, 255, 0.7) 50%,
+    rgba(255, 255, 255, 0.5) 70%,
+    rgba(255, 255, 255, 0.3) 85%,
+    rgba(255, 255, 255, 0.1) 95%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  width: 100%;
+}
+.slider-par-container {
+  display: flex;
+  gap: 1rem;
+  position: relative;
+  left: 2%;
+}
+.slider-par-container p {
+  color: #222222;
+  font-size: 12px;
+  font-family: "Varela Round", sans-serif;
+  font-weight: 400;
+  line-height: 14.45px;
+}
+.slider-title-container {
+  position: relative;
+  left: 2%;
+  width: 558px;
+}
+.slider-title-container h1 {
+  color: #222222;
+  font-size: 34px;
+  font-weight: 700;
+  padding: 0px;
+}
+.slider-title-container button {
+  width: 123px;
+  height: 33px;
+  background: none;
+  outline: none;
+  border: 1px solid #eef6fa;
+  color: #eef6fa;
+  font-size: 14px;
+}

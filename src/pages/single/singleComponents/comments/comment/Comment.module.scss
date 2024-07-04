@@ -1,0 +1,46 @@
+.comment-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+.info-container {
+  display: flex;
+  justify-content: space-between;
+}
+.info-container h1 {
+  font-family: "Bitter";
+  font-weight: 500;
+  font-size: 18px;
+  color: #4d4382;
+}
+.info-container button {
+  background-color: white;
+  border: none;
+  color: #4d4382;
+  font-family: "Varela Round";
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.info-container p {
+  font-family: "Varela";
+  font-size: 11px;
+  font-weight: 400;
+  color: #666666;
+}
+.text-info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.comment-text-container {
+  margin-top: 5px;
+}
+.comment-text-container p {
+  font-family: "Varela";
+  font-weight: 400;
+  font-size: 13px;
+  color: #444444;
+}
