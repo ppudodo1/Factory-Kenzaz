@@ -5,24 +5,24 @@ import twitter from "../../assets/logos/twitter1.png";
 import youtube from "../../assets/logos/Youtube1.png";
 const Social = () => {
   return (
-    <div className={styles["social-container"]}>
+    <section className={styles["social-container"]}>
       <h1 className={styles["social-title"]}>Social</h1>
-      <div className={styles["media-container"]}>
-        <img src={facebook} alt="" />
+      <main className={styles["media-container"]}>
+        <img src={facebook} alt="facebook" />
         <button>Like</button>
         <button>25041 Fans</button>
-      </div>
-      <div className={styles["media-container"]}>
-        <img src={twitter} alt="" />
+      </main>
+      <main className={styles["media-container"]}>
+        <img src={twitter} alt="twitter" />
         <button>Like</button>
         <button>25041 Fans</button>
-      </div>
-      <div className={styles["media-container"]}>
-        <img src={youtube} alt="" />
+      </main>
+      <main className={styles["media-container"]}>
+        <img src={youtube} alt="twitter" />
         <button>Like</button>
         <button>25041 Fans</button>
-      </div>
-    </div>
+      </main>
+    </section>
   );
 };
 

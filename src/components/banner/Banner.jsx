@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Banner.module.scss";
 const Banner = ({ width, height, center, top, bottom }) => {
   return (
-    <div
+    <section
       className={styles["banner-container"]}
       style={{
         height: `${height}px`,
@@ -11,7 +11,7 @@ const Banner = ({ width, height, center, top, bottom }) => {
         marginTop: `${top}px`,
         marginBottom: `${bottom}px`,
       }}
-    ></div>
+    ></section>
   );
 };
 

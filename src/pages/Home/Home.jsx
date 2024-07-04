@@ -10,29 +10,68 @@ import Social from "../../components/social/Social";
 import Video from "../../components/video/Video";
 import Facebook from "../../components/facebook/Facebook";
 import NewsSlider from "../../components/newsSlider/NewsSlider";
-import Editorials from "../../components/editorials/Editorials";
 import PagingSlider from "../../components/pagingSlider/PagingSlider";
-
+import leftArrowTop from "../../assets/logos/Shape1.png";
+import rightArrowTop from "../../assets/logos/Shape2.png";
+import leftArrowBottom from "../../assets/logos/Shape3.png";
+import rightArrowBottom from "../../assets/logos/Shape4.png";
 const Home = () => {
   return (
-    <div className={styles["site-content"]}>
+    <section className={styles["site-content"]}>
       <Header></Header>
       <Banner width={940} height={120} center={"auto"} top={20}></Banner>
       <InfiniteSlider></InfiniteSlider>
-      <div className={styles["big-bottom-container"]}>
-        <div className={styles["big-left-container"]}>
-          <CategoryCard type={"News"}></CategoryCard>
-          <CategoryCard type={"Sport"}></CategoryCard>
+      <section className={styles["big-bottom-container"]}>
+        <article className={styles["big-left-container"]}>
+          <CategoryCard
+            title={"News"}
+            borderColor={"#3677B5"}
+            numberOfNews={3}
+          ></CategoryCard>
+          <CategoryCard
+            title={"Sport"}
+            borderColor={"#84C14F"}
+            numberOfNews={3}
+          ></CategoryCard>
           <Banner width={620} height={120}></Banner>
-          <CategoryCard type={"Bussines"}></CategoryCard>
+          <CategoryCard
+            title={"Bussines"}
+            borderColor={"#EE6151"}
+            numberOfNews={3}
+          ></CategoryCard>
           <Banner width={620} height={120}></Banner>
-          <NewsSlider></NewsSlider>
+          <NewsSlider
+            slidesToShow={2}
+            title={"News Carousel"}
+            arrowLeft={leftArrowTop}
+            arrowRight={rightArrowTop}
+            imageWidth={260}
+            imageHeight={150}
+          ></NewsSlider>
           <div className={styles["editorials-container"]}>
-            <Editorials title={"Editorials"}></Editorials>
-            <Editorials title={"Local News"}></Editorials>
+            <NewsSlider
+              slidesToShow={1}
+              title={"Editorials"}
+              passedWidth={46}
+              borderColor={"#A99765"}
+              arrowLeft={leftArrowBottom}
+              arrowRight={rightArrowBottom}
+              imageWidth={230}
+              imageHeight={150}
+            ></NewsSlider>
+            <NewsSlider
+              slidesToShow={1}
+              title={"Local News"}
+              passedWidth={46}
+              borderColor={"#A99765"}
+              arrowLeft={leftArrowBottom}
+              arrowRight={rightArrowBottom}
+              imageWidth={230}
+              imageHeight={150}
+            ></NewsSlider>
           </div>
-        </div>
-        <div className={styles["big-right-container"]}>
+        </article>
+        <aside className={styles["big-right-container"]}>
           <Sidebar></Sidebar>
           <Social></Social>
           <Video></Video>
@@ -41,12 +80,12 @@ const Home = () => {
             <Banner width={128} height={128} top={0}></Banner>
           </div>
           <Facebook></Facebook>
-        </div>
-      </div>
+        </aside>
+      </section>
       <Banner width={940} height={120} center={"auto"} top={20}></Banner>
       <PagingSlider></PagingSlider>
       <Footer></Footer>
-    </div>
+    </section>
   );
 };
 

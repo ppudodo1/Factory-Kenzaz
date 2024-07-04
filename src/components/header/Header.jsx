@@ -14,17 +14,17 @@ const buttonColors = {
 
 const Header = () => {
   return (
-    <div className={styles["header-outside-container"]}>
-      <div className={styles["header-inside-top"]}>
+    <header className={styles["header-outside-container"]}>
+      <nav className={styles["header-inside-top"]}>
         <div className={styles["header-inside-top-container"]}>
           <div className={styles["logo-container"]}>
             <div className={styles["inner-logo"]}>
               <Link to={"/"}>
-                <img src={logo} alt="" className={styles["logo-image"]} />
+                <img src={logo} alt="logo" className={styles["logo-image"]} />
               </Link>
             </div>
             <Link to={"/"} className={styles["header-link"]}>
-              <h3 className={styles["header-title"]}>Kenzaz</h3>
+              <h3 className={styles["header-title"]}>Kenaz</h3>
             </Link>
           </div>
           <div className={styles["top-link-container"]}>
@@ -38,12 +38,12 @@ const Header = () => {
               Contact
             </a>
             <div className={styles["search-icon"]}>
-              <img src={searchLogo} alt="" />
+              <img src={searchLogo} alt="searchLogo" />
             </div>
           </div>
         </div>
-      </div>
-      <div className={styles["header-inside-bottom"]}>
+      </nav>
+      <nav className={styles["header-inside-bottom"]}>
         <div className={styles["header-inside-bottom-container"]}>
           {Object.entries(buttonColors).map(([key, color]) => (
             <Link
@@ -59,8 +59,8 @@ const Header = () => {
             </Link>
           ))}
         </div>
-      </div>
-    </div>
+      </nav>
+    </header>
   );
 };
 

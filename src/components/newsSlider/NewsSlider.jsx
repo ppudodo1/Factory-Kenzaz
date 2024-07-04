@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useRef } from "react";
 import styles from "./NewsSlider.module.scss";
 import Slider from "react-slick";
 import image from "../../assets/logos/Layer52.png";
 import leftArrow from "../../assets/logos/Shape1.png";
 import rightArrow from "../../assets/logos/Shape2.png";
-import { useRef } from "react";
-const NewsSlider = () => {
+import SingleNews from "../singleNews/SingleNews";
+const NewsSlider = ({
+  slidesToShow,
+  title,
+  passedWidth,
+  borderColor,
+  arrowLeft,
+  arrowRight,
+  imageWidth,
+  imageHeight,
+}) => {
   let sliderRef = useRef(null);
   const next = () => {
     sliderRef.slickNext();
@@ -16,23 +25,29 @@ const NewsSlider = () => {
   const settings = {
     infinite: true,
     speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 2,
+    slidesToShow: slidesToShow,
+    slidesToScroll: slidesToShow,
   };
 
   return (
-    <div className={styles["slider-container"]}>
-      <div className={styles["slider-controls"]}>
-        <h1>News Carousel</h1>
+    <section
+      className={styles["slider-container"]}
+      style={{
+        width: `${passedWidth}%`,
+        borderLeft: `13px solid ${borderColor}`,
+      }}
+    >
+      <header className={styles["slider-controls"]}>
+        <h1>{title}</h1>
         <div>
           <button onClick={previous}>
-            <img src={leftArrow} alt="" />
+            <img src={arrowLeft} alt="leftArrow" />
           </button>
           <button onClick={next}>
-            <img src={rightArrow} alt="" />
+            <img src={arrowRight} alt="rightArrow" />
           </button>
         </div>
-      </div>
+      </header>
 
       <Slider
         ref={(slider) => {
@@ -40,26 +55,26 @@ const NewsSlider = () => {
         }}
         {...settings}
       >
-        <div className={styles["item-container"]}>
-          <div className={styles["item"]}>
-            <img src={image} alt="" />
-            <div className={styles["slider-txt-container"]}>
-              <p>August 26,2024</p>
-              <p>For Obama, MLK's shadow looms large ahead of speech</p>
-            </div>
-          </div>
-        </div>
-        <div className={styles["item-container"]}>
-          <div className={styles["item"]}>
-            <img src={image} alt="" />
-            <div className={styles["slider-txt-container"]}>
-              <p>August 26,2024</p>
-              <p>NASA releases portrait of a planet waving at Saturn</p>
-            </div>
-          </div>
-        </div>
+        <article className={styles["item-container"]}>
+          <SingleNews
+            image={image}
+            date={"August 26, 2024"}
+            title={"For Obama, MLK's shadow looms large ahead of speech"}
+            imageWidth={imageWidth}
+            imageHeight={imageHeight}
+          ></SingleNews>
+        </article>
+        <article className={styles["item-container"]}>
+          <SingleNews
+            image={image}
+            date={"August 26, 2024"}
+            title={"For Obama, MLK's shadow looms large ahead of speech"}
+            imageWidth={imageWidth}
+            imageHeight={imageHeight}
+          ></SingleNews>
+        </article>
       </Slider>
-    </div>
+    </section>
   );
 };
 

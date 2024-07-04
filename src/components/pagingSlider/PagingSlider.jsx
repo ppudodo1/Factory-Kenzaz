@@ -13,8 +13,11 @@ import search from "../../assets/logos/search.png";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./PagingSliderCustom.scss";
-import LeftArrow from "../slider/arrows/leftArrow/LeftArrow";
-import RightArrow from "../slider/arrows/rightArrow/RightArrow";
+import leftArrow from "../../assets/logos/leftArrow.png";
+import rightArrow from "../../assets/logos/rightArrow.png";
+/*import LeftArrow from "../slider/arrows/leftArrow/LeftArrow";
+import RightArrow from "../slider/arrows/rightArrow/RightArrow";*/
+import SliderArrow from "../slider/arrows/sliderArrow/SliderArrow";
 
 const PagingSlider = () => {
   const images = [image1, image2, image3, image4, image5, image6, image7];
@@ -40,8 +43,12 @@ const PagingSlider = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    prevArrow: <LeftArrow />,
-    nextArrow: <RightArrow />,
+    prevArrow: (
+      <SliderArrow imgSrc={leftArrow} altText="Previous"></SliderArrow>
+    ),
+    nextArrow: (
+      <SliderArrow imgSrc={rightArrow} altText="Previous"></SliderArrow>
+    ),
     beforeChange: (oldIndex, newIndex) => {
       setSelectedImage(images[newIndex]);
     },
@@ -78,7 +85,7 @@ const PagingSlider = () => {
             className={styles["slider-item"]}
             onClick={() => handleImageClick(image)}
           >
-            <img src={image} alt="" />
+            <img src={image} alt="descriptive image" />
           </div>
         ))}
       </Slider>
@@ -86,7 +93,7 @@ const PagingSlider = () => {
       {showPopup && (
         <div className={styles["popup-container"]} onClick={togglePopup}>
           <div className={styles["popup"]}>
-            <img src={selectedImage} alt="" />
+            <img src={selectedImage} alt="selectedImage" />
           </div>
         </div>
       )}

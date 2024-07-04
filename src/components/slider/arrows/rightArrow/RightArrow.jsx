@@ -5,7 +5,7 @@ const RightArrow = (props) => {
   const { className, style, onClick } = props;
   return (
     <div className={className} onClick={onClick}>
-      <img src={rightArrow} alt="Previous" />
+      <img src={rightArrow} alt="Next" />
     </div>
   );
 };

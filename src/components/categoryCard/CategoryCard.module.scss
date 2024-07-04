@@ -4,25 +4,21 @@
   margin-top: 20px;
   display: flex;
   flex-direction: column;
-}
-.news-card {
-  border-left: 13px solid #3677b5;
-}
-.sports-card {
-  border-left: 13px solid #84c14f;
-}
-.bussines-card {
-  border-left: 13px solid #ee6151;
+  height: 340px;
 }
 .outer-div-card {
-  padding: 25px;
-  padding-bottom: 40px;
+  margin: 20px;
 }
 .small-card-container {
   display: flex;
   gap: 20px;
-  margin-top: 40px;
   justify-content: space-between;
+  margin-top: 30px;
+}
+.four-news {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 .small-card {
   width: 170px;

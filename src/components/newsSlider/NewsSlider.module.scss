@@ -1,26 +1,13 @@
 .slider-container {
-  margin: 0 auto;
   margin-top: 20px;
   background-color: white;
   border-left: 13px solid #fcc44d;
+  height: 317px;
 }
 .slider-container h1 {
   padding: 20px;
   padding-bottom: 0px;
   margin-bottom: 30px;
-}
-.slider-txt-container p:first-of-type {
-  font-family: "Varela Round";
-  font-size: 12px;
-  font-weight: 400;
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-.slider-txt-container p:nth-of-type(2) {
-  font-family: "Bitter";
-  font-size: 14px;
-  font-weight: 700;
-  color: #363f48;
 }
 .item-container {
   height: 250px;
@@ -30,6 +17,7 @@
 .item {
   margin: 0 auto;
   width: 85%;
+  background-color: red;
 }
 .slider-controls {
   display: flex;

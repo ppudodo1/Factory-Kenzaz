@@ -12,7 +12,7 @@ const NewsComponent = () => {
       </div>
       <div className={styles["article-container"]}>
         <div className={styles["article-image-container"]}>
-          <img src={image} alt="" />
+          <img src={image} alt="forest" />
         </div>
         <div className={styles["article-text-container"]}>
           <p>

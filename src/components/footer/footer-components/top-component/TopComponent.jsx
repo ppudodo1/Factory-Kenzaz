@@ -12,27 +12,27 @@ import kenaz from "../../../../assets/logos/kenaz1.png";
 const TopComponent = () => {
   return (
     <div className={styles["footer-top-outer-container"]}>
-      <div className={styles["kenaz-container"]}>
-        <div className={styles["kenaz-image-container"]}>
-          <img src={kenaz} alt="" />
+      <section className={styles["kenaz-container"]}>
+        <article className={styles["kenaz-image-container"]}>
+          <img src={kenaz} alt="kenaz" />
           <h2>Kenaz</h2>
-        </div>
+        </article>
 
         <p className={styles["kenaz-text-par"]}>
           Lorem ipsum dolor sit amet, consectetur adipsiscing elit. Vivamus leo
           ante.
         </p>
         <div className={styles["icon-container"]}>
-          <img src={rss} alt="" />
-          <img src={facebook} alt="" />
-          <img src={twitter} alt="" />
-          <img src={dribble} alt="" />
-          <img src={linkedin} alt="" />
-          <img src={youtube} alt="" />
-          <img src={skype} alt="" />
+          <img src={rss} alt="rss" />
+          <img src={facebook} alt="facebook" />
+          <img src={twitter} alt="twitter" />
+          <img src={dribble} alt="driblle" />
+          <img src={linkedin} alt="linkedin" />
+          <img src={youtube} alt="youtube" />
+          <img src={skype} alt="skype" />
         </div>
-      </div>
-      <div className={styles["newsletter-container"]}>
+      </section>
+      <section className={styles["newsletter-container"]}>
         <h2>Newsletter</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adidpsicing elit. Vivamus leo
@@ -42,11 +42,10 @@ const TopComponent = () => {
           <input type="text" placeholder="Your mail" />
           <button>Subscribe</button>
         </div>
-      </div>
-
-      <div className={styles["tags-container"]}>
+      </section>
+      <section className={styles["tags-container"]}>
         <h2>Tags Widget</h2>
-        <div className={styles["tags-button-container"]}>
+        <article className={styles["tags-button-container"]}>
           <button>assueverit</button>
           <button>utroquoe</button>
           <button>probo</button>
@@ -60,8 +59,8 @@ const TopComponent = () => {
           <button>assueverit</button>
           <button>utroquoe</button>
           <button>assueverit</button>
-        </div>
-      </div>
+        </article>
+      </section>
     </div>
   );
 };

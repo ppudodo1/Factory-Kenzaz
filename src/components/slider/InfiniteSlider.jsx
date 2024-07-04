@@ -4,22 +4,30 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from "./InfiniteSlider.module.scss";
 import sliderImage from "../../assets/logos/Layer48.png";
+import leftArrow from "../../assets/logos/leftArrow.png";
+import rightArrow from "../../assets/logos/rightArrow.png";
 import LeftArrow from "./arrows/leftArrow/LeftArrow";
 import RightArrow from "./arrows/rightArrow/RightArrow";
+import SliderArrow from "./arrows/sliderArrow/SliderArrow";
 const InfiniteSlider = () => {
   const settings = {
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    prevArrow: <LeftArrow></LeftArrow>,
-    nextArrow: <RightArrow></RightArrow>,
+    prevArrow: (
+      <SliderArrow imgSrc={leftArrow} altText="Previous"></SliderArrow>
+    ),
+    nextArrow: (
+      <SliderArrow imgSrc={rightArrow} altText="Previous"></SliderArrow>
+    ),
   };
+
   return (
-    <div className={styles["slider-container"]}>
+    <section className={styles["slider-container"]}>
       <Slider {...settings}>
-        <div className={styles["slider-item-container"]}>
-          <img src={sliderImage} alt="" />
+        <article className={styles["slider-item-container"]}>
+          <img src={sliderImage} alt="sliderImage" />
           <div className={styles["slider-txt-container"]}>
             <div className={styles["slider-par-container"]}>
               <p>August 26, 2024</p>
@@ -30,9 +38,9 @@ const InfiniteSlider = () => {
               <button>Read article</button>
             </div>
           </div>
-        </div>
-        <div className={styles["slider-item-container"]}>
-          <img src={sliderImage} alt="" />
+        </article>
+        <article className={styles["slider-item-container"]}>
+          <img src={sliderImage} alt="sliderImage" />
           <div className={styles["slider-txt-container"]}>
             <div className={styles["slider-par-container"]}>
               <p>August 26, 2024</p>
@@ -43,9 +51,9 @@ const InfiniteSlider = () => {
               <button>Read article</button>
             </div>
           </div>
-        </div>
-        <div className={styles["slider-item-container"]}>
-          <img src={sliderImage} alt="" />
+        </article>
+        <article className={styles["slider-item-container"]}>
+          <img src={sliderImage} alt="sliderImage" />
           <div className={styles["slider-txt-container"]}>
             <div className={styles["slider-par-container"]}>
               <p>August 26, 2024</p>
@@ -56,9 +64,9 @@ const InfiniteSlider = () => {
               <button>Read article</button>
             </div>
           </div>
-        </div>
+        </article>
       </Slider>
-    </div>
+    </section>
   );
 };
 
