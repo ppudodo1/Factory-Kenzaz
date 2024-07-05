@@ -16,6 +16,7 @@ const AddComment = () => {
       userEmail: email,
       userComment: comment,
       date: formattedDateTime,
+      replyComments: [],
     };
     let currentArrOfComments =
       JSON.parse(localStorage.getItem("comments")) || [];

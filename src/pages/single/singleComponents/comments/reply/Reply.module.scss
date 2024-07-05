@@ -1,0 +1,52 @@
+.add-comment-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.add-comment-container p {
+  font-family: "Varela";
+  font-weight: 400;
+  font-size: 13px;
+  color: #444444;
+}
+.comment-input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.comment-input input {
+  width: 203px;
+  height: 33px;
+  background-color: #dddddd;
+  color: #666666;
+  font-family: "Varela Round";
+  font-weight: 400;
+  font-size: 14px;
+  border: none;
+  padding-left: 20px;
+}
+.comment-input textarea {
+  width: 332px;
+  height: 157px;
+  background-color: #dddddd;
+  color: #666666;
+  font-family: "Varela Round";
+  font-weight: 400;
+  font-size: 14px;
+  border: none;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+.comment-input button {
+  margin-top: 10px;
+  width: 123px;
+  height: 33px;
+  background-color: #4d4382;
+  border: none;
+  color: white;
+  padding: 10px;
+  font-family: "Varela Round";
+  font-weight: 400;
+  font-size: 14px;
+}
