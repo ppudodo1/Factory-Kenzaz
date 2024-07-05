@@ -4,9 +4,9 @@ import Footer from "../../components/footer/Footer";
 import styles from "./Category.module.scss";
 import Banner from "../../components/banner/Banner";
 import InfiniteSlider from "../../components/slider/InfiniteSlider";
-import NewsComponent from "./categoryComponents/newsComponent/NewsComponent";
-import Numeration from "./categoryComponents/numeration/Numeration";
 import SideContent from "../../components/sideContent/SideContent";
+import NewsComponent from "../../components/categoryComponents/newsComponent/NewsComponent.jsx";
+import Numeration from "../../components/categoryComponents/numeration/Numeration.jsx";
 const Category = () => {
   return (
     <div className={styles["site-content"]}>

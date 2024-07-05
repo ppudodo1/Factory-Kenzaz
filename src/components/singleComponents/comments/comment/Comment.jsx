@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Comment.module.scss";
-import avatar from "../../../../../assets/logos/avatar.png";
+import avatar from "../../../../assets/logos/avatar.png";
 import Reply from "../reply/Reply";
 import RepliedComment from "../repliedComment/RepliedComment";
 const Comment = ({ userName, date, comment, id }) => {

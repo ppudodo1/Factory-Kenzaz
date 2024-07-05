@@ -1,6 +1,6 @@
 import React from "react";
-import image from "../../../../assets/logos/Layer67.png";
-import socials from "../../../../assets/logos/Layer69.png";
+import image from "../../../assets/logos/Layer67.png";
+import socials from "../../../assets/logos/Layer69.png";
 import styles from "./FullArticle.module.scss";
 const FullArticle = () => {
   return (

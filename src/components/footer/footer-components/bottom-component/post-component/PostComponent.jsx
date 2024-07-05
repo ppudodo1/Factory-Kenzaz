@@ -24,7 +24,7 @@ const PostComponent = ({ check }) => {
           </section>
         )}
         {check === "sidebar" && (
-          <div className={styles["post-container"]}>
+          <div className={`${styles["post-container"]} ${styles["hovering"]}`}>
             <div className={styles["text-container"]}>
               <p className={styles["post-date-sidebar"]}>August 26, 2024</p>
               <p className={styles["post-short-sidebar"]}>

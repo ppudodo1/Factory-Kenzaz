@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./RepliedComment.module.scss";
-import avatar from "../../../../../assets/logos/avatar.png";
+import avatar from "../../../../assets/logos/avatar.png";
 
 const RepliedComment = ({ autor, comment }) => {
   return (

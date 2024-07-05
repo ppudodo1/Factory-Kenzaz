@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Author.module.scss";
-import profilePicture from "../../../../assets/logos/Layer68.png";
+import profilePicture from "../../../assets/logos/Layer68.png";
 const Author = () => {
   return (
     <section className={styles["author-container"]}>

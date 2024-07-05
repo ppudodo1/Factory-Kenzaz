@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./NewsComponent.module.scss";
-import image from "../../../../assets/logos/Layer59.png";
+import image from "../../../assets/logos/Layer59.png";
 import { Link } from "react-router-dom";
 const NewsComponent = () => {
   return (

@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./HeroBanner.module.scss";
-import backgroundImage from "../../../../assets/logos/Layer65.png";
+import backgroundImage from "../../../assets/logos/Layer65.png";
 const HeroBanner = () => {
   return (
     <section className={styles["hero-container"]}>
