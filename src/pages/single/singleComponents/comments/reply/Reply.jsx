@@ -14,7 +14,7 @@ const Reply = ({ id }) => {
     window.location.reload();
   };
   return (
-    <main className={styles["add-comment-container"]}>
+    <main className={styles["reply-comment-container"]}>
       <h1>Add your Reply</h1>
       <div className={styles["comment-input"]}>
         <input

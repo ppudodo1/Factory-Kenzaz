@@ -10,7 +10,7 @@ $color-light-gray: #cccccc;
   font-family: $font-family;
 }
 
-.footer-bottom-outer-container {
+.footer-bottom-container {
   display: flex;
   width: $container-width;
   margin: $margin-auto;
@@ -19,7 +19,7 @@ $color-light-gray: #cccccc;
 .featured-container {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; // 'left' is not a valid value for justify-content
+  justify-content: flex-start;
   margin-right: 1rem;
 }
 

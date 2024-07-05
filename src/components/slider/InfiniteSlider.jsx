@@ -9,6 +9,7 @@ import rightArrow from "../../assets/logos/rightArrow.png";
 import LeftArrow from "./arrows/leftArrow/LeftArrow";
 import RightArrow from "./arrows/rightArrow/RightArrow";
 import SliderArrow from "./arrows/sliderArrow/SliderArrow";
+import { Link } from "react-router-dom";
 const InfiniteSlider = () => {
   const settings = {
     infinite: true,
@@ -27,7 +28,7 @@ const InfiniteSlider = () => {
     <section className={styles["slider-container"]}>
       <Slider {...settings}>
         <article className={styles["slider-item-container"]}>
-          <img src={sliderImage} alt="sliderImage" />
+          <img src={sliderImage} alt="forest" />
           <div className={styles["slider-txt-container"]}>
             <div className={styles["slider-par-container"]}>
               <p>August 26, 2024</p>
@@ -35,7 +36,9 @@ const InfiniteSlider = () => {
             </div>
             <div className={styles["slider-title-container"]}>
               <h1>'Margot' breathlessly reimagines Anne Frank's sister</h1>
-              <button>Read article</button>
+              <Link to={"/single"}>
+                <button>Read article</button>
+              </Link>
             </div>
           </div>
         </article>
@@ -48,7 +51,9 @@ const InfiniteSlider = () => {
             </div>
             <div className={styles["slider-title-container"]}>
               <h1>'Margot' breathlessly reimagines Anne Frank's sister</h1>
-              <button>Read article</button>
+              <Link to={"/single"}>
+                <button>Read article</button>
+              </Link>
             </div>
           </div>
         </article>
@@ -61,7 +66,9 @@ const InfiniteSlider = () => {
             </div>
             <div className={styles["slider-title-container"]}>
               <h1>'Margot' breathlessly reimagines Anne Frank's sister</h1>
-              <button>Read article</button>
+              <Link to={"/single"}>
+                <button>Read article</button>
+              </Link>
             </div>
           </div>
         </article>

@@ -4,7 +4,7 @@ import TopComponent from "./footer-components/top-component/TopComponent";
 import BotttomComponent from "./footer-components/bottom-component/BotttomComponent";
 const Footer = () => {
   return (
-    <footer className={styles["footer-styles"]}>
+    <footer className={styles["footer-container"]}>
       <div className={styles["purple-divider"]}></div>
       <TopComponent> </TopComponent>
       <BotttomComponent></BotttomComponent>

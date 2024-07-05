@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./NewsComponent.module.scss";
 import image from "../../../../assets/logos/Layer59.png";
+import { Link } from "react-router-dom";
 const NewsComponent = () => {
   return (
     <div className={styles["news-container"]}>
@@ -23,7 +24,9 @@ const NewsComponent = () => {
             consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
             ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.
           </p>
-          <button>Read article</button>
+          <a href={"/single"}>
+            <button>Read article</button>
+          </a>
         </div>
       </div>
     </div>

@@ -11,12 +11,12 @@ const CategoryCard = ({ title, borderColor, numberOfNews }) => {
         borderLeft: `13px solid ${borderColor}`,
       }}
     >
-      <div className={styles["outer-div-card"]}>
+      <div className={styles["main-news-container"]}>
         <div className={styles["card-text"]}>
           <h1>{title}</h1>
-          <a href="/single">See all</a>
+          <a href="/category">See all</a>
         </div>
-        <div className={styles["small-card-container"]}>
+        <div className={styles["multiple-card-container"]}>
           {[...Array(numberOfNews)].map((_, index) => (
             <SingleNews
               key={index}

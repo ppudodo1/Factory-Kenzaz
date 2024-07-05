@@ -5,6 +5,7 @@ import image from "../../assets/logos/Layer52.png";
 import leftArrow from "../../assets/logos/Shape1.png";
 import rightArrow from "../../assets/logos/Shape2.png";
 import SingleNews from "../singleNews/SingleNews";
+import { Link } from "react-router-dom";
 const NewsSlider = ({
   slidesToShow,
   title,

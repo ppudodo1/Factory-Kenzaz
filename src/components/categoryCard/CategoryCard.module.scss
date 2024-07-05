@@ -6,30 +6,16 @@
   flex-direction: column;
   height: 340px;
 }
-.outer-div-card {
+.main-news-container {
   margin: 20px;
 }
-.small-card-container {
+.multiple-card-container {
   display: flex;
   gap: 20px;
   justify-content: space-between;
   margin-top: 30px;
 }
-.four-news {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-.small-card {
-  width: 170px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-.small-card img {
-  width: 170px;
-  height: 128px;
-}
+
 .card-text {
   display: flex;
   justify-content: space-between;
@@ -46,16 +32,4 @@
   font-family: "Varela Round", sans-serif;
   font-size: 14px;
   margin-top: 15px;
-}
-.small-card p:first-of-type {
-  color: #666666;
-  font-family: "Varela Round", sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-}
-.small-card p:nth-of-type(2) {
-  color: #363f48;
-  font-family: "Bitter";
-  font-size: 14px;
-  font-weight: 700;
 }

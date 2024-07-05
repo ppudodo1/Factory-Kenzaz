@@ -4,7 +4,7 @@ import PostComponent from "./post-component/PostComponent";
 
 const BotttomComponent = () => {
   return (
-    <footer className={styles["footer-bottom-outer-container"]}>
+    <footer className={styles["footer-bottom-container"]}>
       <section className={styles["featured-container"]}>
         <h2>Featured</h2>
         <PostComponent check={"footer"} />

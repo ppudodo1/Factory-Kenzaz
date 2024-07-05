@@ -6,7 +6,7 @@ const Author = () => {
     <section className={styles["author-container"]}>
       <h1>About the Author</h1>
       <div className={styles["content-wrapper"]}>
-        <img src={profilePicture} alt="" />
+        <img src={profilePicture} alt="author-image" />
         <article className={styles["author-text-container"]}>
           <p>
             Molestias ultricies, ante quam urna ut volutpat, egestas dolor dui,

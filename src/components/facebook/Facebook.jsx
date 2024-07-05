@@ -4,7 +4,7 @@ import image from "../../assets/logos/Layer34.png";
 const Facebook = () => {
   return (
     <section className={styles["facebook-container"]}>
-      <img src={image} alt="forest" />
+      <img src={image} alt="facebook" />
     </section>
   );
 };

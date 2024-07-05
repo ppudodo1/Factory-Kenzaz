@@ -1,23 +1,25 @@
-.small-card {
+.single-card {
   width: 170px;
   display: flex;
   flex-direction: column;
   gap: 5px;
   margin: 0 auto;
 }
-.small-card img {
+.single-card img {
   width: 170px;
   height: 128px;
 }
-.small-card p:first-of-type {
+.single-card p:first-of-type {
+  text-decoration: none;
   font-size: 12px;
   font-weight: 400;
   color: #666666;
   font-family: "Varela Round";
 }
-.small-card p:nth-of-type(2) {
+.single-card p:nth-of-type(2) {
   font-size: 14px;
   font-weight: 700;
   color: #363f48;
   font-family: "Bitter";
+  text-decoration: none;
 }

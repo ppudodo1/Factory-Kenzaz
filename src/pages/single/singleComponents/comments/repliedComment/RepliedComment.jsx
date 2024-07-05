@@ -4,12 +4,12 @@ import avatar from "../../../../../assets/logos/avatar.png";
 
 const RepliedComment = ({ autor, comment }) => {
   return (
-    <main className={styles["comment-container"]}>
-      <div className={styles["avatar-image-container"]}>
+    <main className={styles["replied-comment-container"]}>
+      <div className={styles["replied-avatar-image-container"]}>
         <img src={avatar} alt="avatar" />
       </div>
-      <div className={styles["content-container"]}>
-        <div className={styles["info-container"]}>
+      <div className={styles["replied-content-container"]}>
+        <div className={styles["replied-info-container"]}>
           <div className={styles["text-info-container"]}>
             <h1>{autor}</h1>
           </div>

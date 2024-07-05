@@ -3,6 +3,7 @@ import styles from "./Header.module.scss";
 import logo from "../../assets/logos/VectorSmartObject1.png";
 import searchLogo from "../../assets/logos/searchIcon.png";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 const buttonColors = {
   news: "#299EC3",
   business: "#EE6151",
@@ -13,6 +14,10 @@ const buttonColors = {
 };
 
 const Header = () => {
+  const [isActive, setIsActive] = useState(false);
+  const handleClick = () => {
+    setIsActive(true);
+  };
   return (
     <header className={styles["header-outside-container"]}>
       <nav className={styles["header-inside-top"]}>
@@ -54,6 +59,7 @@ const Header = () => {
                 borderBottomColor: color,
                 "--hover-color": color,
               }}
+              onClick={handleClick}
             >
               {key.toUpperCase()}
             </Link>

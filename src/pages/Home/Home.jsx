@@ -5,24 +5,21 @@ import styles from "./Home.module.scss";
 import Banner from "../../components/banner/Banner";
 import InfiniteSlider from "../../components/slider/InfiniteSlider";
 import CategoryCard from "../../components/categoryCard/CategoryCard";
-import Sidebar from "../../components/sidebar/Sidebar";
-import Social from "../../components/social/Social";
-import Video from "../../components/video/Video";
-import Facebook from "../../components/facebook/Facebook";
 import NewsSlider from "../../components/newsSlider/NewsSlider";
 import PagingSlider from "../../components/pagingSlider/PagingSlider";
 import leftArrowTop from "../../assets/logos/Shape1.png";
 import rightArrowTop from "../../assets/logos/Shape2.png";
 import leftArrowBottom from "../../assets/logos/Shape3.png";
 import rightArrowBottom from "../../assets/logos/Shape4.png";
+import SideContent from "../../components/sideContent/SideContent";
 const Home = () => {
   return (
-    <section className={styles["site-content"]}>
+    <div className={styles["site-content"]}>
       <Header></Header>
       <Banner width={940} height={120} center={"auto"} top={20}></Banner>
       <InfiniteSlider></InfiniteSlider>
-      <section className={styles["big-bottom-container"]}>
-        <article className={styles["big-left-container"]}>
+      <div className={styles["main-container"]}>
+        <main className={styles["main-left-container"]}>
           <CategoryCard
             title={"News"}
             borderColor={"#3677B5"}
@@ -70,22 +67,15 @@ const Home = () => {
               imageHeight={150}
             ></NewsSlider>
           </div>
-        </article>
-        <aside className={styles["big-right-container"]}>
-          <Sidebar></Sidebar>
-          <Social></Social>
-          <Video></Video>
-          <div className={styles["banner-container"]}>
-            <Banner width={128} height={128} top={0}></Banner>
-            <Banner width={128} height={128} top={0}></Banner>
-          </div>
-          <Facebook></Facebook>
+        </main>
+        <aside className={styles["main-right-container"]}>
+          <SideContent></SideContent>
         </aside>
-      </section>
+      </div>
       <Banner width={940} height={120} center={"auto"} top={20}></Banner>
       <PagingSlider></PagingSlider>
       <Footer></Footer>
-    </section>
+    </div>
   );
 };
 

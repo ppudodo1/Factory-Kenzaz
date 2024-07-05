@@ -63,9 +63,15 @@ $container-height: 53px;
     z-index: -1;
     transition: top 0.3s ease-in-out;
   }
-
   &:hover::after {
-    top: 0;
+    top: 0%;
+  }
+  &:focus::after {
+    top: 0%;
+  }
+
+  &.active::after {
+    background-color: var(--hover-color); /* Apply hover color permanently */
   }
 }
 
@@ -90,6 +96,7 @@ $container-height: 53px;
   justify-content: center;
   align-items: center;
   height: $container-height;
+  cursor: pointer;
 }
 
 .header-title {

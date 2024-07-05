@@ -11,7 +11,7 @@ import kenaz from "../../../../assets/logos/kenaz1.png";
 
 const TopComponent = () => {
   return (
-    <div className={styles["footer-top-outer-container"]}>
+    <div className={styles["footer-top-container"]}>
       <section className={styles["kenaz-container"]}>
         <article className={styles["kenaz-image-container"]}>
           <img src={kenaz} alt="kenaz" />

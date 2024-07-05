@@ -30,7 +30,7 @@ const Comment = ({ userName, date, comment, id }) => {
   return (
     <main className={styles["comment-container"]}>
       <div className={styles["avatar-image-container"]}>
-        <img src={avatar} alt="" />
+        <img src={avatar} alt="avatar" />
       </div>
       <div className={styles["content-container"]}>
         <div className={styles["info-container"]}>

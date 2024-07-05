@@ -2,7 +2,7 @@ $background-clr: #252525;
 $txt-color: white;
 $max-width-container: 940px;
 
-.footer-styles {
+.footer-container {
   background-color: $background-clr;
   color: $txt-color;
   text-align: center;
@@ -18,7 +18,7 @@ $max-width-container: 940px;
   justify-content: space-between;
   margin-bottom: 200px;
 }
-.footer-styles p {
+.footer-container p {
   color: #999999;
   font-family: "Varela Round";
   font-size: 12px;

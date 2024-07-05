@@ -1,9 +1,12 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
-body{
-  background-color:#EEEEEE ;
+body {
+  background-color: #eeeeee;
+}
+button {
+  cursor: pointer;
 }
 /*:root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;

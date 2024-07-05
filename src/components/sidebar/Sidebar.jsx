@@ -9,14 +9,14 @@ const Sidebar = () => {
         <a href="">Top Rated</a>
         <a href="">Comments</a>
       </nav>
-      <main className={styles["sidebar-content"]}>
+      <div className={styles["sidebar-content"]}>
         <PostComponent check={"sidebar"}></PostComponent>
         <PostComponent check={"sidebar"}></PostComponent>
         <PostComponent check={"sidebar"}></PostComponent>
         <PostComponent check={"sidebar"}></PostComponent>
         <PostComponent check={"sidebar"}></PostComponent>
         <PostComponent check={"sidebar"}></PostComponent>
-      </main>
+      </div>
     </section>
   );
 };
