@@ -1,12 +1,14 @@
 .comment-container {
   display: flex;
-  justify-content: center;
+
   gap: 10px;
   margin-top: 30px;
+  width: 567px;
 }
 .info-container {
   display: flex;
   justify-content: space-between;
+  width: 500px;
 }
 .info-container h1 {
   font-family: "Bitter";
