@@ -2,8 +2,15 @@ import React from "react";
 import styles from "./CategoryCard.module.scss";
 import backgroundImage from "../../assets/logos/Layer59.png";
 import SingleNews from "../singleNews/SingleNews";
-const CategoryCard = ({ title, borderColor, numberOfNews }) => {
-  console.log("Testing branch");
+const CategoryCard = ({
+  title,
+  borderColor,
+  numberOfNews,
+  articles,
+  articleIndex,
+}) => {
+  //console.log("Articles", articles);
+
   return (
     <main
       className={`${styles["news-card"]} ${styles["card-container"]}`}
@@ -17,14 +24,19 @@ const CategoryCard = ({ title, borderColor, numberOfNews }) => {
           <a href="/category">See all</a>
         </div>
         <div className={styles["multiple-card-container"]}>
-          {[...Array(numberOfNews)].map((_, index) => (
-            <SingleNews
-              key={index}
-              image={backgroundImage}
-              date={"August 26, 2024"}
-              title={"For Obama, MLK's shadow looms large ahead of speech"}
-            />
-          ))}
+          {articles && articles.length > 0 ? (
+            articles.map((article, index) => (
+              <SingleNews
+                key={index}
+                image={article.image}
+                date={new Date(article.publishedAt).toDateString()}
+                title={article.title}
+                articleId={articleIndex + index}
+              />
+            ))
+          ) : (
+            <p>No articles available</p>
+          )}
         </div>
       </div>
     </main>

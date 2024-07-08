@@ -15,6 +15,8 @@ const NewsSlider = ({
   arrowRight,
   imageWidth,
   imageHeight,
+  articles,
+  articleIndex,
 }) => {
   let sliderRef = useRef(null);
   const next = () => {
@@ -57,22 +59,46 @@ const NewsSlider = ({
         {...settings}
       >
         <article className={styles["item-container"]}>
-          <SingleNews
-            image={image}
-            date={"August 26, 2024"}
-            title={"For Obama, MLK's shadow looms large ahead of speech"}
-            imageWidth={imageWidth}
-            imageHeight={imageHeight}
-          ></SingleNews>
+          {articles && articles.length > 0 ? (
+            <SingleNews
+              image={articles[0].image}
+              date={new Date(articles[0].publishedAt).toDateString()}
+              title={articles[0].title}
+              imageWidth={imageWidth}
+              imageHeight={imageHeight}
+              articleId={articleIndex}
+            />
+          ) : (
+            <p>No articles available</p>
+          )}
         </article>
         <article className={styles["item-container"]}>
-          <SingleNews
-            image={image}
-            date={"August 26, 2024"}
-            title={"For Obama, MLK's shadow looms large ahead of speech"}
-            imageWidth={imageWidth}
-            imageHeight={imageHeight}
-          ></SingleNews>
+          {articles && articles.length > 0 ? (
+            <SingleNews
+              image={articles[1].image}
+              date={new Date(articles[1].publishedAt).toDateString()}
+              title={articles[1].title}
+              imageWidth={imageWidth}
+              imageHeight={imageHeight}
+              articleId={articleIndex + 1}
+            />
+          ) : (
+            <p>No articles available</p>
+          )}
+        </article>
+        <article className={styles["item-container"]}>
+          {articles && articles.length > 0 ? (
+            <SingleNews
+              image={articles[2].image}
+              date={new Date(articles[2].publishedAt).toDateString()}
+              title={articles[2].title}
+              imageWidth={imageWidth}
+              imageHeight={imageHeight}
+              articleId={articleIndex + 2}
+            />
+          ) : (
+            <p>No articles available</p>
+          )}
         </article>
       </Slider>
     </section>

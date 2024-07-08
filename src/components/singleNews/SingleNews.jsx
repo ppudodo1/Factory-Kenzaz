@@ -1,8 +1,16 @@
 import React from "react";
 import styles from "./SingleNews.module.scss";
-const SingleNews = ({ image, date, title, imageWidth, imageHeight }) => {
+import { Link } from "react-router-dom";
+const SingleNews = ({
+  image,
+  date,
+  title,
+  imageWidth,
+  imageHeight,
+  articleId,
+}) => {
   return (
-    <a href="/single" style={{ textDecoration: "none" }}>
+    <Link to={`/single/${articleId}`} style={{ textDecoration: "none" }}>
       <div
         className={styles["single-card"]}
         style={{
@@ -20,7 +28,7 @@ const SingleNews = ({ image, date, title, imageWidth, imageHeight }) => {
         <p>{date}</p>
         <p>{title}</p>
       </div>
-    </a>
+    </Link>
   );
 };
 

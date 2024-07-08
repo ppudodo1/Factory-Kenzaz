@@ -2,22 +2,14 @@ import React from "react";
 import image from "../../../assets/logos/Layer67.png";
 import socials from "../../../assets/logos/Layer69.png";
 import styles from "./FullArticle.module.scss";
-const FullArticle = () => {
+const FullArticle = ({ content }) => {
+  if (!content) {
+    return <div>Couldn't find text...</div>;
+  }
   return (
     <section className={styles["full-article-container"]}>
       <article className={styles["row-of-article"]}>
-        <p>
-          Vestibulum id ligula porta felis euismod semper. Morbi leo risus,
-          porta ac consectetur ac, vestibulum at eros. Aenean lacinia bibendum
-          nulla sed consectetur.Sed posuere consectetur est at lobortis. Donec
-          sed odio dui. Aenean lacinia bibendum nulla sed consectetur. Cras
-          justo odio, dapibus ac facilisis in, egestas eget quam. Donec sed odio
-          dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
-          auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-          Donec sed odio dui. Nulla vitae elit libero, a pharetra augue.
-          Curabitur blandit tempus porttitor. Nulla vitae elit libero, a
-          pharetra augue. Nullam quis risus eget urna mollis ornare vel eu leo.
-        </p>
+        <p>{content}</p>
       </article>
       <article>
         <img src={image} alt="articleImage" />

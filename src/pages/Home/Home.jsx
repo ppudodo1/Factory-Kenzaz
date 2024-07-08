@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import styles from "./Home.module.scss";
@@ -12,7 +12,22 @@ import rightArrowTop from "../../assets/logos/Shape2.png";
 import leftArrowBottom from "../../assets/logos/Shape3.png";
 import rightArrowBottom from "../../assets/logos/Shape4.png";
 import SideContent from "../../components/sideContent/SideContent";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchNews } from "../../features/news/newsSlice";
+
 const Home = () => {
+  const dispatch = useDispatch();
+  const articles = useSelector((state) => state.news.articles);
+  const newsStatus = useSelector((state) => state.news.status);
+  useEffect(() => {
+    if (newsStatus === "idle") {
+      dispatch(fetchNews());
+    }
+  }, [newsStatus, dispatch]);
+  if (newsStatus === "loading") {
+    return <div>Loading...</div>;
+  }
+  console.log("This is an article: ", articles);
   return (
     <div className={styles["site-content"]}>
       <Header></Header>
@@ -24,17 +39,23 @@ const Home = () => {
             title={"News"}
             borderColor={"#3677B5"}
             numberOfNews={3}
+            articles={articles.slice(0, 3)}
+            articleIndex={0}
           ></CategoryCard>
           <CategoryCard
             title={"Sport"}
             borderColor={"#84C14F"}
             numberOfNews={3}
+            articles={articles.slice(3, 6)}
+            articleIndex={3}
           ></CategoryCard>
           <Banner width={620} height={120}></Banner>
           <CategoryCard
             title={"Bussines"}
             borderColor={"#EE6151"}
             numberOfNews={3}
+            articles={articles.slice(6, 9)}
+            articleIndex={6}
           ></CategoryCard>
           <Banner width={620} height={120}></Banner>
           <NewsSlider
@@ -44,6 +65,8 @@ const Home = () => {
             arrowRight={rightArrowTop}
             imageWidth={260}
             imageHeight={150}
+            articles={articles.slice(6, 9)}
+            articleIndex={6}
           ></NewsSlider>
           <div className={styles["editorials-container"]}>
             <NewsSlider
@@ -55,6 +78,8 @@ const Home = () => {
               arrowRight={rightArrowBottom}
               imageWidth={230}
               imageHeight={150}
+              articles={articles.slice(0, 3)}
+              articleIndex={0}
             ></NewsSlider>
             <NewsSlider
               slidesToShow={1}
@@ -65,6 +90,8 @@ const Home = () => {
               arrowRight={rightArrowBottom}
               imageWidth={230}
               imageHeight={150}
+              articles={articles.slice(3, 6)}
+              articleIndex={3}
             ></NewsSlider>
           </div>
         </main>

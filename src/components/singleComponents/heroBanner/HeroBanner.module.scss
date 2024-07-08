@@ -6,6 +6,10 @@
 .hero-item-container {
   position: relative;
 }
+.hero-item-container img {
+  width: 100%;
+  object-fit: cover;
+}
 .slider-txt-container {
   position: absolute;
   bottom: 0px;

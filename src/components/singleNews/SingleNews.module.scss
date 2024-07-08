@@ -8,6 +8,7 @@
 .single-card img {
   width: 170px;
   height: 128px;
+  object-fit: cover;
 }
 .single-card p:first-of-type {
   text-decoration: none;

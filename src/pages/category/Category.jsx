@@ -7,7 +7,21 @@ import InfiniteSlider from "../../components/slider/InfiniteSlider";
 import SideContent from "../../components/sideContent/SideContent";
 import NewsComponent from "../../components/categoryComponents/newsComponent/NewsComponent.jsx";
 import Numeration from "../../components/categoryComponents/numeration/Numeration.jsx";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchNews } from "../../features/news/newsSlice.js";
+import { useEffect } from "react";
 const Category = () => {
+  const dispatch = useDispatch();
+  const articles = useSelector((state) => state.news.articles);
+  const newsStatus = useSelector((state) => state.news.status);
+  useEffect(() => {
+    if (newsStatus === "idle") {
+      dispatch(fetchNews());
+    }
+  }, [newsStatus, dispatch]);
+  if (newsStatus === "loading" && articles == undefined) {
+    return <div>Loading...</div>;
+  }
   return (
     <div className={styles["site-content"]}>
       <Header></Header>
@@ -18,12 +32,12 @@ const Category = () => {
           <div className={styles["news-title-container"]}>
             <h1>News</h1>
           </div>
-          <NewsComponent></NewsComponent>
-          <NewsComponent></NewsComponent>
-          <NewsComponent></NewsComponent>
-          <NewsComponent></NewsComponent>
-          <NewsComponent></NewsComponent>
-          <NewsComponent></NewsComponent>
+          <NewsComponent article={articles[0]} articleId={0}></NewsComponent>
+          <NewsComponent article={articles[1]} articleId={1}></NewsComponent>
+          <NewsComponent article={articles[2]} articleId={2}></NewsComponent>
+          <NewsComponent article={articles[3]} articleId={3}></NewsComponent>
+          <NewsComponent article={articles[4]} articleId={4}></NewsComponent>
+          <NewsComponent article={articles[5]} articleId={5}></NewsComponent>
           <Numeration></Numeration>
           <Banner
             width={620}

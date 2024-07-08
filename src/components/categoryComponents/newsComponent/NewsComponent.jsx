@@ -2,31 +2,27 @@ import React from "react";
 import styles from "./NewsComponent.module.scss";
 import image from "../../../assets/logos/Layer59.png";
 import { Link } from "react-router-dom";
-const NewsComponent = () => {
+const NewsComponent = ({ article, articleId }) => {
+  if (!article) {
+    return <div>Loading...</div>;
+  }
   return (
     <div className={styles["news-container"]}>
-      <h1>Patriotsvv make cuts ... and Tim Tebow survives (so far)</h1>
+      <h1>{article.title}</h1>
       <div className={styles["info-container"]}>
-        <p>August 26,2024</p>
+        <p>{new Date(article.publishedAt).toDateString()}</p>
         <p>Author: Matej Sudar</p>
         <p>12 comments</p>
       </div>
       <div className={styles["article-container"]}>
         <div className={styles["article-image-container"]}>
-          <img src={image} alt="forest" />
+          <img src={article.image} alt="forest" />
         </div>
         <div className={styles["article-text-container"]}>
-          <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-            volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-            ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-            consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-            ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.
-          </p>
-          <a href={"/single"}>
+          <p>{article.content}</p>
+          <Link to={`/single/${articleId}`}>
             <button>Read article</button>
-          </a>
+          </Link>
         </div>
       </div>
     </div>
