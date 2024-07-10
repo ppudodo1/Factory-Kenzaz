@@ -1,5 +1,5 @@
 import React from "react";
-import rightArrow from "../../../../assets/logos/rightArrow.png";
+import rightArrow from "../../../../../assets/logos/rightArrow.png";
 import "./RightArrow.scss";
 const RightArrow = (props) => {
   const { className, style, onClick } = props;

@@ -1,17 +1,17 @@
 import React, { useEffect } from "react";
-import Header from "../../components/header/Header";
-import Footer from "../../components/footer/Footer";
+import Header from "../../components/generalComponents/header/Header.jsx";
+import Footer from "../../components/generalComponents/footer/Footer.jsx";
 import styles from "./Home.module.scss";
-import Banner from "../../components/banner/Banner";
-import InfiniteSlider from "../../components/slider/InfiniteSlider";
-import CategoryCard from "../../components/categoryCard/CategoryCard";
-import NewsSlider from "../../components/newsSlider/NewsSlider";
-import PagingSlider from "../../components/pagingSlider/PagingSlider";
+import Banner from "../../components/generalComponents/banner/Banner.jsx";
+import InfiniteSlider from "../../components/generalComponents/slider/InfiniteSlider";
+import CategoryCard from "../../components/homeComponents/categoryCard/CategoryCard.jsx";
+import NewsSlider from "../../components/homeComponents/newsSlider/NewsSlider.jsx";
+import PagingSlider from "../../components/homeComponents/pagingSlider/PagingSlider";
 import leftArrowTop from "../../assets/logos/Shape1.png";
 import rightArrowTop from "../../assets/logos/Shape2.png";
 import leftArrowBottom from "../../assets/logos/Shape3.png";
 import rightArrowBottom from "../../assets/logos/Shape4.png";
-import SideContent from "../../components/sideContent/SideContent";
+import SideContent from "../../components/generalComponents/sideContent/SideContent";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchNews } from "../../features/news/newsSlice";
 

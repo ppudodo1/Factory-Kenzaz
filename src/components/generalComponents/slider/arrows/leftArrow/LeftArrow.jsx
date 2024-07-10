@@ -1,5 +1,5 @@
 import React from "react";
-import leftArrow from "../../../../assets/logos/leftArrow.png";
+import leftArrow from "../../../../../assets/logos/leftArrow.png";
 import "./LeftArrow.scss";
 const LeftArrow = (props) => {
   const { className, style, onClick } = props;

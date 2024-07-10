@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./PostComponent.module.scss";
-import image from "../../../../../assets/logos/Layer63.png";
+import image from "../../../../../../assets/logos/Layer63.png";
 
 const PostComponent = ({ check }) => {
   return (

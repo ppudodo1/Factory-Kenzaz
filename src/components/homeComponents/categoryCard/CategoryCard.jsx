@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./CategoryCard.module.scss";
-import backgroundImage from "../../assets/logos/Layer59.png";
-import SingleNews from "../singleNews/SingleNews";
+
+import SingleNews from "../../generalComponents/singleNews/SingleNews";
 const CategoryCard = ({
   title,
   borderColor,
@@ -9,8 +9,6 @@ const CategoryCard = ({
   articles,
   articleIndex,
 }) => {
-  //console.log("Articles", articles);
-
   return (
     <main
       className={`${styles["news-card"]} ${styles["card-container"]}`}

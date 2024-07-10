@@ -1,23 +1,23 @@
 import React, { useState, useRef } from "react";
 import styles from "./PagingSlider.module.scss";
 import Slider from "react-slick";
-import image1 from "../../assets/logos/stock1.jpg";
-import image2 from "../../assets/logos/stock2.jpg";
-import image3 from "../../assets/logos/stock3.jpg";
-import image4 from "../../assets/logos/stock4.jpeg";
-import image5 from "../../assets/logos/stock5.jpg";
-import image6 from "../../assets/logos/stock6.jpg";
-import image7 from "../../assets/logos/stock7.jpg";
-import image8 from "../../assets/logos/stock8.jpg";
-import search from "../../assets/logos/search.png";
+import image1 from "../../../assets/logos/stock1.jpg";
+import image2 from "../../../assets/logos/stock2.jpg";
+import image3 from "../../../assets/logos/stock3.jpg";
+import image4 from "../../../assets/logos/stock4.jpeg";
+import image5 from "../../../assets/logos/stock5.jpg";
+import image6 from "../../../assets/logos/stock6.jpg";
+import image7 from "../../../assets/logos/stock7.jpg";
+import image8 from "../../../assets/logos/stock8.jpg";
+import search from "../../../assets/logos/search.png";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./PagingSliderCustom.scss";
-import leftArrow from "../../assets/logos/leftArrow.png";
-import rightArrow from "../../assets/logos/rightArrow.png";
+import leftArrow from "../../../assets/logos/leftArrow.png";
+import rightArrow from "../../../assets/logos/rightArrow.png";
 /*import LeftArrow from "../slider/arrows/leftArrow/LeftArrow";
 import RightArrow from "../slider/arrows/rightArrow/RightArrow";*/
-import SliderArrow from "../slider/arrows/sliderArrow/SliderArrow";
+import SliderArrow from "../../generalComponents/slider/arrows/sliderArrow/SliderArrow";
 
 const PagingSlider = () => {
   const images = [image1, image2, image3, image4, image5, image6, image7];

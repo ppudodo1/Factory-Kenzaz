@@ -1,10 +1,10 @@
 import React, { useRef } from "react";
 import styles from "./NewsSlider.module.scss";
 import Slider from "react-slick";
-import image from "../../assets/logos/Layer52.png";
-import leftArrow from "../../assets/logos/Shape1.png";
-import rightArrow from "../../assets/logos/Shape2.png";
-import SingleNews from "../singleNews/SingleNews";
+
+import leftArrow from "../../../assets/logos/Shape1.png";
+import rightArrow from "../../../assets/logos/Shape2.png";
+import SingleNews from "../../generalComponents/singleNews/SingleNews";
 import { Link } from "react-router-dom";
 const NewsSlider = ({
   slidesToShow,

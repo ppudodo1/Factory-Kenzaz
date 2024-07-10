@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Footer.module.scss";
-import TopComponent from "./footer-components/top-component/TopComponent";
+import TopComponent from "./footer-components/top-component/TopComponent.jsx";
 import BotttomComponent from "./footer-components/bottom-component/BotttomComponent";
 const Footer = () => {
   return (

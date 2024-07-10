@@ -1,10 +1,10 @@
 import React from "react";
-import Header from "../../components/header/Header";
-import Footer from "../../components/footer/Footer";
+import Header from "../../components/generalComponents/header/Header.jsx";
+import Footer from "../../components/generalComponents/footer/Footer.jsx";
 import styles from "./Category.module.scss";
-import Banner from "../../components/banner/Banner";
-import InfiniteSlider from "../../components/slider/InfiniteSlider";
-import SideContent from "../../components/sideContent/SideContent";
+import Banner from "../../components/generalComponents/banner/Banner.jsx";
+import InfiniteSlider from "../../components/generalComponents/slider/InfiniteSlider";
+import SideContent from "../../components/generalComponents/sideContent/SideContent";
 import NewsComponent from "../../components/categoryComponents/newsComponent/NewsComponent.jsx";
 import Numeration from "../../components/categoryComponents/numeration/Numeration.jsx";
 import { useDispatch, useSelector } from "react-redux";

@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./Social.module.scss";
-import facebook from "../../assets/logos/Facebook1.png";
-import twitter from "../../assets/logos/twitter1.png";
-import youtube from "../../assets/logos/Youtube1.png";
+import facebook from "../../../assets/logos/Facebook1.png";
+import twitter from "../../../assets/logos/twitter1.png";
+import youtube from "../../../assets/logos/Youtube1.png";
 const Social = () => {
   return (
     <article className={styles["social-container"]}>

@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./BottomComponent.module.scss";
-import PostComponent from "./post-component/PostComponent";
+import PostComponent from "./post-component/PostComponent.jsx";
 
 const BotttomComponent = () => {
   return (

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./Header.module.scss";
-import logo from "../../assets/logos/VectorSmartObject1.png";
-import searchLogo from "../../assets/logos/searchIcon.png";
+import logo from "../../../assets/logos/VectorSmartObject1.png";
+import searchLogo from "../../../assets/logos/searchIcon.png";
 import { Link, useLocation } from "react-router-dom";
 
 const buttonColors = {

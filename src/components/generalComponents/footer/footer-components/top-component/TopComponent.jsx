@@ -1,13 +1,13 @@
 import React from "react";
 import styles from "./TopComponent.module.scss";
-import dribble from "../../../../assets/logos/dribble.png";
-import facebook from "../../../../assets/logos/Facebook.png";
-import linkedin from "../../../../assets/logos/Linkedin.png";
-import rss from "../../../../assets/logos/Rss.png";
-import skype from "../../../../assets/logos/Skype.png";
-import twitter from "../../../../assets/logos/twitter.png";
-import youtube from "../../../../assets/logos/Youtube.png";
-import kenaz from "../../../../assets/logos/kenaz1.png";
+import dribble from "../../../../../assets/logos/dribble.png";
+import facebook from "../../../../../assets/logos/Facebook.png";
+import linkedin from "../../../../../assets/logos/Linkedin.png";
+import rss from "../../../../../assets/logos/Rss.png";
+import skype from "../../../../../assets/logos/Skype.png";
+import twitter from "../../../../../assets/logos/twitter.png";
+import youtube from "../../../../../assets/logos/Youtube.png";
+import kenaz from "../../../../../assets/logos/kenaz1.png";
 
 const TopComponent = () => {
   return (
