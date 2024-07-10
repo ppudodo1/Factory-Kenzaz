@@ -27,12 +27,12 @@ const Home = () => {
   if (newsStatus === "loading") {
     return <div>Loading...</div>;
   }
-  console.log("This is an article: ", articles);
+
   return (
     <div className={styles["site-content"]}>
       <Header></Header>
       <Banner width={940} height={120} center={"auto"} top={20}></Banner>
-      <InfiniteSlider></InfiniteSlider>
+      <InfiniteSlider articles={articles}></InfiniteSlider>
       <div className={styles["main-container"]}>
         <main className={styles["main-left-container"]}>
           <CategoryCard

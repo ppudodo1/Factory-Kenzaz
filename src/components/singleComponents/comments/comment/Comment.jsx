@@ -28,7 +28,7 @@ const Comment = ({ userName, date, comment, id }) => {
   }, [checkReply]);
 
   return (
-    <main className={styles["comment-container"]}>
+    <div className={styles["comment-container"]}>
       <div className={styles["avatar-image-container"]}>
         <img src={avatar} alt="avatar" />
       </div>
@@ -49,7 +49,7 @@ const Comment = ({ userName, date, comment, id }) => {
           ))}
         {checkReply && <Reply id={id}></Reply>}
       </div>
-    </main>
+    </div>
   );
 };
 

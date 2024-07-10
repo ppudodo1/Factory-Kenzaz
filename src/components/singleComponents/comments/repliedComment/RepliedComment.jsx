@@ -4,7 +4,7 @@ import avatar from "../../../../assets/logos/avatar.png";
 
 const RepliedComment = ({ autor, comment }) => {
   return (
-    <main className={styles["replied-comment-container"]}>
+    <div className={styles["replied-comment-container"]}>
       <div className={styles["replied-avatar-image-container"]}>
         <img src={avatar} alt="avatar" />
       </div>
@@ -18,7 +18,7 @@ const RepliedComment = ({ autor, comment }) => {
           <p>{comment}</p>
         </div>
       </div>
-    </main>
+    </div>
   );
 };
 

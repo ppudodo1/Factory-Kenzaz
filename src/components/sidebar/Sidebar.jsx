@@ -10,12 +10,9 @@ const Sidebar = () => {
         <a href="">Comments</a>
       </nav>
       <div className={styles["sidebar-content"]}>
-        <PostComponent check={"sidebar"}></PostComponent>
-        <PostComponent check={"sidebar"}></PostComponent>
-        <PostComponent check={"sidebar"}></PostComponent>
-        <PostComponent check={"sidebar"}></PostComponent>
-        <PostComponent check={"sidebar"}></PostComponent>
-        <PostComponent check={"sidebar"}></PostComponent>
+        {Array.from({ length: 6 }).map(() => (
+          <PostComponent check={"sidebar"}></PostComponent>
+        ))}
       </div>
     </section>
   );

@@ -29,7 +29,7 @@ const AddComment = () => {
     window.location.reload();
   };
   return (
-    <main className={styles["add-comment-container"]}>
+    <div className={styles["add-comment-container"]}>
       <h1>Add your Comment</h1>
       <p>
         Molestias ultricies, ante quam urna ut volutpat, egestas dolor dui, nec
@@ -59,7 +59,7 @@ const AddComment = () => {
         ></textarea>
         <button onClick={commentSubmit}>Submit</button>
       </div>
-    </main>
+    </div>
   );
 };
 

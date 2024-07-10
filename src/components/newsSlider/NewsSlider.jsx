@@ -40,7 +40,7 @@ const NewsSlider = ({
         borderLeft: `13px solid ${borderColor}`,
       }}
     >
-      <header className={styles["slider-controls"]}>
+      <div className={styles["slider-controls"]}>
         <h1>{title}</h1>
         <div>
           <button onClick={previous}>
@@ -50,7 +50,7 @@ const NewsSlider = ({
             <img src={arrowRight} alt="rightArrow" />
           </button>
         </div>
-      </header>
+      </div>
 
       <Slider
         ref={(slider) => {
@@ -58,48 +58,20 @@ const NewsSlider = ({
         }}
         {...settings}
       >
-        <article className={styles["item-container"]}>
-          {articles && articles.length > 0 ? (
+        {articles && articles.length > 0 ? (
+          articles.map((data, index) => (
             <SingleNews
-              image={articles[0].image}
-              date={new Date(articles[0].publishedAt).toDateString()}
-              title={articles[0].title}
+              image={data.image}
+              date={new Date(data.publishedAt).toDateString()}
+              title={data.title}
               imageWidth={imageWidth}
               imageHeight={imageHeight}
-              articleId={articleIndex}
+              articleId={articleIndex + index}
             />
-          ) : (
-            <p>No articles available</p>
-          )}
-        </article>
-        <article className={styles["item-container"]}>
-          {articles && articles.length > 0 ? (
-            <SingleNews
-              image={articles[1].image}
-              date={new Date(articles[1].publishedAt).toDateString()}
-              title={articles[1].title}
-              imageWidth={imageWidth}
-              imageHeight={imageHeight}
-              articleId={articleIndex + 1}
-            />
-          ) : (
-            <p>No articles available</p>
-          )}
-        </article>
-        <article className={styles["item-container"]}>
-          {articles && articles.length > 0 ? (
-            <SingleNews
-              image={articles[2].image}
-              date={new Date(articles[2].publishedAt).toDateString()}
-              title={articles[2].title}
-              imageWidth={imageWidth}
-              imageHeight={imageHeight}
-              articleId={articleIndex + 2}
-            />
-          ) : (
-            <p>No articles available</p>
-          )}
-        </article>
+          ))
+        ) : (
+          <p>No articles available</p>
+        )}
       </Slider>
     </section>
   );

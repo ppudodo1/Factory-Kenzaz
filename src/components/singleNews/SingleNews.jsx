@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./SingleNews.module.scss";
 import { Link } from "react-router-dom";
+
 const SingleNews = ({
   image,
   date,

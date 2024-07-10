@@ -26,18 +26,26 @@ const Category = () => {
     <div className={styles["site-content"]}>
       <Header></Header>
       <Banner width={940} height={120} center={"auto"} top={20}></Banner>
-      <InfiniteSlider></InfiniteSlider>
+      <InfiniteSlider articles={articles}></InfiniteSlider>
       <div className={styles["main-container"]}>
         <main className={styles["main-left-container"]}>
           <div className={styles["news-title-container"]}>
             <h1>News</h1>
           </div>
-          <NewsComponent article={articles[0]} articleId={0}></NewsComponent>
-          <NewsComponent article={articles[1]} articleId={1}></NewsComponent>
-          <NewsComponent article={articles[2]} articleId={2}></NewsComponent>
-          <NewsComponent article={articles[3]} articleId={3}></NewsComponent>
-          <NewsComponent article={articles[4]} articleId={4}></NewsComponent>
-          <NewsComponent article={articles[5]} articleId={5}></NewsComponent>
+          {articles && articles.length > 0 ? (
+            articles
+              .slice(0, 5)
+              .map((data, index) => (
+                <NewsComponent
+                  article={data}
+                  articleId={index}
+                  key={index}
+                ></NewsComponent>
+              ))
+          ) : (
+            <p>No articles</p>
+          )}
+
           <Numeration></Numeration>
           <Banner
             width={620}

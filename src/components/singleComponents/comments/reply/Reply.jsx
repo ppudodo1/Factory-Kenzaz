@@ -14,7 +14,7 @@ const Reply = ({ id }) => {
     window.location.reload();
   };
   return (
-    <main className={styles["reply-comment-container"]}>
+    <div className={styles["reply-comment-container"]}>
       <h1>Add your Reply</h1>
       <div className={styles["comment-input"]}>
         <input
@@ -32,7 +32,7 @@ const Reply = ({ id }) => {
         ></textarea>
         <button onClick={() => getCommentById()}>Reply</button>
       </div>
-    </main>
+    </div>
   );
 };
 

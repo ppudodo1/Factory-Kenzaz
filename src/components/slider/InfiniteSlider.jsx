@@ -10,7 +10,7 @@ import LeftArrow from "./arrows/leftArrow/LeftArrow";
 import RightArrow from "./arrows/rightArrow/RightArrow";
 import SliderArrow from "./arrows/sliderArrow/SliderArrow";
 import { Link } from "react-router-dom";
-const InfiniteSlider = () => {
+const InfiniteSlider = ({ articles }) => {
   const settings = {
     infinite: true,
     speed: 500,
@@ -23,55 +23,29 @@ const InfiniteSlider = () => {
       <SliderArrow imgSrc={rightArrow} altText="Previous"></SliderArrow>
     ),
   };
-
+  if (articles.length == 0) {
+    return <h1>Loading...</h1>;
+  }
   return (
     <section className={styles["slider-container"]}>
       <Slider {...settings}>
-        <article className={styles["slider-item-container"]}>
-          <img src={sliderImage} alt="forest" />
-          <div className={styles["slider-txt-container"]}>
-            <div className={styles["slider-par-container"]}>
-              <p>August 26, 2024</p>
-              <p>22 comments</p>
+        {articles.map((article, index) => (
+          <article className={styles["slider-item-container"]}>
+            <img src={article.image} alt="forest" />
+            <div className={styles["slider-txt-container"]}>
+              <div className={styles["slider-par-container"]}>
+                <p>August 26, 2024</p>
+                <p>22 comments</p>
+              </div>
+              <div className={styles["slider-title-container"]}>
+                <h1>{article.title}</h1>
+                <Link to={`/single/${index}`}>
+                  <button>Read article</button>
+                </Link>
+              </div>
             </div>
-            <div className={styles["slider-title-container"]}>
-              <h1>'Margot' breathlessly reimagines Anne Frank's sister</h1>
-              <Link to={"/single"}>
-                <button>Read article</button>
-              </Link>
-            </div>
-          </div>
-        </article>
-        <article className={styles["slider-item-container"]}>
-          <img src={sliderImage} alt="sliderImage" />
-          <div className={styles["slider-txt-container"]}>
-            <div className={styles["slider-par-container"]}>
-              <p>August 26, 2024</p>
-              <p>22 comments</p>
-            </div>
-            <div className={styles["slider-title-container"]}>
-              <h1>'Margot' breathlessly reimagines Anne Frank's sister</h1>
-              <Link to={"/single"}>
-                <button>Read article</button>
-              </Link>
-            </div>
-          </div>
-        </article>
-        <article className={styles["slider-item-container"]}>
-          <img src={sliderImage} alt="sliderImage" />
-          <div className={styles["slider-txt-container"]}>
-            <div className={styles["slider-par-container"]}>
-              <p>August 26, 2024</p>
-              <p>22 comments</p>
-            </div>
-            <div className={styles["slider-title-container"]}>
-              <h1>'Margot' breathlessly reimagines Anne Frank's sister</h1>
-              <Link to={"/single"}>
-                <button>Read article</button>
-              </Link>
-            </div>
-          </div>
-        </article>
+          </article>
+        ))}
       </Slider>
     </section>
   );

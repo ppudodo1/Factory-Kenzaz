@@ -19,6 +19,7 @@ const Single = () => {
   const articles = useSelector((state) => state.news.articles);
   const newsStatus = useSelector((state) => state.news.status);
   useEffect(() => {
+    window.scrollTo(0, 0);
     if (newsStatus === "idle") {
       dispatch(fetchNews());
     }
@@ -32,7 +33,6 @@ const Single = () => {
   if (!articles[articleId]) {
     return <div>Article not found</div>;
   }
-  // console.log("This is an article: ", articles[articleId].title);
   return (
     <div className={styles["site-content"]}>
       <Header></Header>

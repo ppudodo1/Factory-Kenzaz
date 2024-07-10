@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Header.module.scss";
 import logo from "../../assets/logos/VectorSmartObject1.png";
 import searchLogo from "../../assets/logos/searchIcon.png";
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+
 const buttonColors = {
   news: "#299EC3",
   business: "#EE6151",
@@ -14,10 +14,8 @@ const buttonColors = {
 };
 
 const Header = () => {
-  const [isActive, setIsActive] = useState(false);
-  const handleClick = () => {
-    setIsActive(true);
-  };
+  const location = useLocation();
+
   return (
     <header className={styles["header-outside-container"]}>
       <nav className={styles["header-inside-top"]}>
@@ -53,13 +51,14 @@ const Header = () => {
           {Object.entries(buttonColors).map(([key, color]) => (
             <Link
               key={key}
-              to={`/category`}
+              to={`/category/${key}`}
               className={styles["button-link"]}
               style={{
                 borderBottomColor: color,
                 "--hover-color": color,
+                backgroundColor:
+                  location.pathname.split("/")[2] === key ? color : "initial",
               }}
-              onClick={handleClick}
             >
               {key.toUpperCase()}
             </Link>
