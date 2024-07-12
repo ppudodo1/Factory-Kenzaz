@@ -10,6 +10,8 @@ import LeftArrow from "./arrows/leftArrow/LeftArrow";
 import RightArrow from "./arrows/rightArrow/RightArrow";
 import SliderArrow from "./arrows/sliderArrow/SliderArrow";
 import { Link } from "react-router-dom";
+import getCurDate from "../../../app/gettingDate.js";
+
 const InfiniteSlider = ({ articles }) => {
   const settings = {
     infinite: true,
@@ -34,7 +36,7 @@ const InfiniteSlider = ({ articles }) => {
             <img src={article.image} alt="article-image" />
             <div className={styles["slider-txt-container"]}>
               <div className={styles["slider-par-container"]}>
-                <p>{new Date(article.publishedAt).toDateString()}</p>
+                <p>{getCurDate()}</p>
                 <p>22 comments</p>
               </div>
               <div className={styles["slider-title-container"]}>

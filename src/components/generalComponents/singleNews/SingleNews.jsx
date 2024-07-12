@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./SingleNews.module.scss";
 import { Link } from "react-router-dom";
-
+import getCurDate from "../../../app/gettingDate";
 const SingleNews = ({
   image,
   date,
@@ -26,7 +26,7 @@ const SingleNews = ({
             height: `${imageHeight}px`,
           }}
         />
-        <p>{date}</p>
+        <p>{getCurDate()}</p>
         <p>{title}</p>
       </div>
     </Link>

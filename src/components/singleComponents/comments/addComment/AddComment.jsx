@@ -1,11 +1,14 @@
 import React from "react";
 import styles from "./AddComment.module.scss";
 import { useState } from "react";
-
+import { useDispatch, useSelector } from "react-redux";
+import { addComment } from "../../../../features/storedComments/commentsSlice";
 const AddComment = () => {
   const [userName, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [comment, setComment] = useState("");
+  const dispatch = useDispatch();
+  const comments = useSelector((state) => state.comments.arrOfComments);
   const commentSubmit = () => {
     const currentDateTime = new Date();
     const formattedDateTime = currentDateTime.toLocaleString();
@@ -16,6 +19,15 @@ const AddComment = () => {
       date: formattedDateTime,
       replyComments: [],
     };
+    dispatch(
+      addComment({
+        userName,
+        email,
+        comment,
+        replyComments: [],
+        formattedDateTime,
+      })
+    );
     let currentArrOfComments =
       JSON.parse(localStorage.getItem("comments")) || [];
     currentArrOfComments.push(commentObj);
@@ -24,7 +36,7 @@ const AddComment = () => {
     setUsername("");
     setEmail("");
     setComment("");
-    window.location.reload();
+    //window.location.reload();
   };
   return (
     <div className={styles["add-comment-container"]}>

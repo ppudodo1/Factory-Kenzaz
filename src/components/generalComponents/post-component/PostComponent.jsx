@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./PostComponent.module.scss";
 import image from "../../../assets/logos/Layer63.png";
 import { Link } from "react-router-dom";
+import getCurDate from "../../../app/gettingDate";
 const PostComponent = ({ check, title, date, imageData, articleId }) => {
   return (
     <Link to={`/single/${articleId}`} style={{ textDecoration: "none" }}>
@@ -26,9 +27,7 @@ const PostComponent = ({ check, title, date, imageData, articleId }) => {
         {check === "sidebar" && (
           <div className={`${styles["post-container"]} ${styles["hovering"]}`}>
             <div className={styles["text-container"]}>
-              <p className={styles["post-date-sidebar"]}>
-                {new Date(date).toDateString()}
-              </p>
+              <p className={styles["post-date-sidebar"]}>{getCurDate()}</p>
               <p className={styles["post-short-sidebar"]}>{title}</p>
             </div>
             <figure className={styles["image-container"]}>

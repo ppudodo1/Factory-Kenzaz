@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./HeroBanner.module.scss";
 import backgroundImage from "../../../assets/logos/Layer65.png";
+import getCurDate from "../../../app/gettingDate";
 const HeroBanner = ({ title, image }) => {
   if (!title) {
     return <div>Loading...</div>;
@@ -11,7 +12,7 @@ const HeroBanner = ({ title, image }) => {
         <img src={image} alt="heroImage" />
         <div className={styles["slider-txt-container"]}>
           <div className={styles["slider-par-container"]}>
-            <p>August 26, 2024</p>
+            <p>{getCurDate()}</p>
           </div>
           <div className={styles["slider-title-container"]}>
             <h1>{title}</h1>

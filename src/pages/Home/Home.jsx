@@ -14,17 +14,12 @@ import rightArrowBottom from "../../assets/logos/Shape4.png";
 import SideContent from "../../components/generalComponents/sideContent/SideContent";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchNews } from "../../features/news/newsSlice";
-import axios from "axios";
 
 const Home = () => {
   const dispatch = useDispatch();
   const articles = useSelector((state) => state.news.articles);
   const newsStatus = useSelector((state) => state.news.status);
-  const test = async () => {
-    await axios.get("http://localhost:4000/").then((response) => {
-      console.log(response.data);
-    });
-  };
+
   useEffect(() => {
     //test();
     if (newsStatus === "idle") {
