@@ -14,11 +14,11 @@ const Comment = ({ userName, date, comment, id }) => {
     let thisComment = commentsArr[id];
     if (
       thisComment &&
-      thisComment.replyComments &&
-      thisComment.replyComments.length > 0
+      thisComment.replyComment &&
+      thisComment.replyComment.length > 0
     ) {
       setReplied(true);
-      setRepliedComments(thisComment.replyComments);
+      setRepliedComments(thisComment.replyComment);
     }
     setThisComment(thisComment);
   };

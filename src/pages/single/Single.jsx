@@ -46,7 +46,7 @@ const Single = () => {
           <FullArticle content={articles[articleId].content}></FullArticle>
           <Banner width={620} height={120} center={"auto"} top={20}></Banner>
           <Author></Author>
-          <Comments></Comments>
+          <Comments articleId={articleId}></Comments>
         </main>
         <aside className={styles["main-right-contaier"]}>
           <SideContent articles={articles}></SideContent>

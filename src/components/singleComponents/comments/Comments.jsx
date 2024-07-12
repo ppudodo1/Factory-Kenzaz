@@ -3,12 +3,12 @@ import styles from "./Comments.module.scss";
 import Comment from "./comment/Comment";
 import AddComment from "./addComment/AddComment";
 import { useDispatch, useSelector } from "react-redux";
-
+import { useParams } from "react-router";
 let commentsArr = JSON.parse(localStorage.getItem("comments")) || [];
 
 const Comments = () => {
   const comments = useSelector((state) => state.comments.arrOfComments);
-  console.log("Redux comments: ", comments);
+  const { articleId } = useParams();
   if (commentsArr.length == 0) {
     return (
       <div className={styles["comments-outer-container"]}>
@@ -22,16 +22,20 @@ const Comments = () => {
     <div className={styles["comments-outer-container"]}>
       <h1>Comments</h1>
       <div className={styles["comments-inner-container"]}>
-        {commentsArr.map((comment, index) => (
-          <Comment
-            userName={comment.user}
-            date={comment.date}
-            comment={comment.userComment}
-            key={index}
-            id={index}
-          ></Comment>
-        ))}
-        <AddComment></AddComment>
+        {commentsArr.map((comment, index) => {
+          if (comment.articleId == articleId) {
+            return (
+              <Comment
+                userName={comment.user}
+                date={comment.date}
+                comment={comment.userComment}
+                key={index}
+                id={index}
+              ></Comment>
+            );
+          }
+        })}
+        <AddComment articleId={articleId}></AddComment>
       </div>
     </div>
   );

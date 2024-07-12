@@ -1,15 +1,18 @@
 import React, { useState } from "react";
 import styles from "./Reply.module.scss";
+import { useDispatch } from "react-redux";
+
 const Reply = ({ id }) => {
   let [username, setUsername] = useState("");
   let [userComment, setUserComment] = useState("");
+
   const getCommentById = () => {
     let replyComment = {
       name: username,
       comment: userComment,
     };
     let commentsArr = JSON.parse(localStorage.getItem("comments")) || [];
-    commentsArr[id].replyComments.push(replyComment);
+    commentsArr[id].replyComment.push(replyComment);
     localStorage.setItem("comments", JSON.stringify(commentsArr));
     window.location.reload();
   };

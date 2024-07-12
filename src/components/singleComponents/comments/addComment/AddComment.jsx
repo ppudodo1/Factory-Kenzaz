@@ -3,7 +3,7 @@ import styles from "./AddComment.module.scss";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addComment } from "../../../../features/storedComments/commentsSlice";
-const AddComment = () => {
+const AddComment = ({ articleId }) => {
   const [userName, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [comment, setComment] = useState("");
@@ -26,17 +26,13 @@ const AddComment = () => {
         comment,
         replyComments: [],
         formattedDateTime,
+        articleId,
       })
     );
-    let currentArrOfComments =
-      JSON.parse(localStorage.getItem("comments")) || [];
-    currentArrOfComments.push(commentObj);
-    localStorage.setItem("comments", JSON.stringify(currentArrOfComments));
-    console.log("CurrentArrOfCommments: ", currentArrOfComments);
     setUsername("");
     setEmail("");
     setComment("");
-    //window.location.reload();
+    window.location.reload();
   };
   return (
     <div className={styles["add-comment-container"]}>

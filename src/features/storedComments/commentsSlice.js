@@ -1,9 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
-
+const initialComments = JSON.parse(localStorage.getItem("comments")) || [];
 const commentsSlice = createSlice({
   name: "comments",
   initialState: {
-    arrOfComments: [],
+    arrOfComments: initialComments,
     status: "idle",
     error: null,
   },
@@ -16,8 +16,14 @@ const commentsSlice = createSlice({
         userComment: action.payload.comment,
         replyComment: action.payload.replyComments || [],
         date: action.payload.formattedDateTime,
+        articleId: action.payload.articleId,
       });
+
+      localStorage.setItem("comments", JSON.stringify(state.arrOfComments));
       return state;
+    },
+    fetchedData: (state, action = {}) => {
+      state.initialState = action.payload;
     },
   },
 });
