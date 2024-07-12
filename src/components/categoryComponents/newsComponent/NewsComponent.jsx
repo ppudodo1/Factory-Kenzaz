@@ -16,10 +16,10 @@ const NewsComponent = ({ article, articleId }) => {
       </div>
       <div className={styles["article-container"]}>
         <div className={styles["article-image-container"]}>
-          <img src={article.image} alt="forest" />
+          <img src={article.image} alt="article-image" />
         </div>
         <div className={styles["article-text-container"]}>
-          <p>{article.content}</p>
+          <p>{article.content.substring(0, 300)}...</p>
           <Link to={`/single/${articleId}`}>
             <button>Read article</button>
           </Link>

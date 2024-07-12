@@ -31,10 +31,10 @@ const InfiniteSlider = ({ articles }) => {
       <Slider {...settings}>
         {articles.map((article, index) => (
           <article className={styles["slider-item-container"]}>
-            <img src={article.image} alt="forest" />
+            <img src={article.image} alt="article-image" />
             <div className={styles["slider-txt-container"]}>
               <div className={styles["slider-par-container"]}>
-                <p>August 26, 2024</p>
+                <p>{new Date(article.publishedAt).toDateString()}</p>
                 <p>22 comments</p>
               </div>
               <div className={styles["slider-title-container"]}>

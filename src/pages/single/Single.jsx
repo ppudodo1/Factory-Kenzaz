@@ -23,7 +23,7 @@ const Single = () => {
     if (newsStatus === "idle") {
       dispatch(fetchNews());
     }
-  }, [newsStatus, dispatch]);
+  }, [newsStatus, dispatch, articleId]);
   if (newsStatus === "loading") {
     return <div>Loading...</div>;
   }
@@ -49,7 +49,7 @@ const Single = () => {
           <Comments></Comments>
         </main>
         <aside className={styles["main-right-contaier"]}>
-          <SideContent></SideContent>
+          <SideContent articles={articles}></SideContent>
         </aside>
       </div>
       <Footer></Footer>

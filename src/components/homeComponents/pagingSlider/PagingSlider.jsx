@@ -77,7 +77,6 @@ const PagingSlider = () => {
         className={styles["search-button"]}
         onClick={handleSearchClick}
       />
-
       <Slider ref={sliderRef} {...settings}>
         {images.map((image, index) => (
           <div
@@ -89,7 +88,6 @@ const PagingSlider = () => {
           </div>
         ))}
       </Slider>
-
       {showPopup && (
         <div className={styles["popup-container"]} onClick={togglePopup}>
           <div className={styles["popup"]}>

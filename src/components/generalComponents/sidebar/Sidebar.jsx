@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Sidebar.module.scss";
-import PostComponent from "../footer/footer-components/bottom-component/post-component/PostComponent";
-const Sidebar = () => {
+import PostComponent from "../post-component/PostComponent";
+const Sidebar = ({ articles }) => {
   return (
     <section className={styles["sidebar-container"]}>
       <nav className={styles["sidebar-title"]}>
@@ -10,9 +10,18 @@ const Sidebar = () => {
         <a href="">Comments</a>
       </nav>
       <div className={styles["sidebar-content"]}>
-        {Array.from({ length: 6 }).map(() => (
-          <PostComponent check={"sidebar"}></PostComponent>
-        ))}
+        {(articles && articles.length) > 0 &&
+          articles
+            .slice(0, 6)
+            .map((data, index) => (
+              <PostComponent
+                check={"sidebar"}
+                title={data.title}
+                imageData={data.image}
+                articleId={index}
+                date={data.publishedAt}
+              ></PostComponent>
+            ))}
       </div>
     </section>
   );

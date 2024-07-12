@@ -14,7 +14,7 @@ const Author = () => {
             suscipit egestas, augue vel suspendisse. Et felis venenatis blandit
             sed est ultrices, adipiscing urna, at aliquam nullam facilisis
             aliquet sapien, eget duis consectetuer tristique nunc vitae erat, mi
-            purus nisl lorem.{" "}
+            purus nisl lorem.
           </p>
         </article>
       </div>

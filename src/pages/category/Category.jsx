@@ -56,7 +56,7 @@ const Category = () => {
           ></Banner>
         </main>
         <aside className={styles["main-right-container"]}>
-          <SideContent></SideContent>
+          <SideContent articles={articles}></SideContent>
         </aside>
       </div>
       <Footer></Footer>

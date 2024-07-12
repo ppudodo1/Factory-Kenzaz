@@ -5,10 +5,10 @@ import Social from "../social/Social";
 import Video from "../video/Video";
 import Banner from "../banner/Banner";
 import Facebook from "../facebook/Facebook";
-const SideContent = () => {
+const SideContent = ({ articles }) => {
   return (
     <div className={styles["side-content-container"]}>
-      <Sidebar></Sidebar>
+      <Sidebar articles={articles}></Sidebar>
       <Social></Social>
       <Video></Video>
       <div className={styles["banner-container"]}>

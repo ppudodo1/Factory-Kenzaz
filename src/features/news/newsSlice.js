@@ -2,12 +2,8 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 export const fetchNews = createAsyncThunk("news/fetchNews", async () => {
-  const response = await axios.get(
-    `https://gnews.io/api/v4/top-headlines?category=sports&lang=en&country=us&max=10&apikey=${
-      import.meta.env.VITE_APP_API_KEY
-    }`
-  );
-  return response.data.articles;
+  const response = await axios.get("https://news-api-mu-two.vercel.app/");
+  return response.data;
 });
 const newsSlice = createSlice({
   name: "news",

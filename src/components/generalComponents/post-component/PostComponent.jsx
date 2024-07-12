@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "./PostComponent.module.scss";
-import image from "../../../../../../assets/logos/Layer63.png";
-
-const PostComponent = ({ check }) => {
+import image from "../../../assets/logos/Layer63.png";
+import { Link } from "react-router-dom";
+const PostComponent = ({ check, title, date, imageData, articleId }) => {
   return (
-    <a href="/single" style={{ textDecoration: "none" }}>
+    <Link to={`/single/${articleId}`} style={{ textDecoration: "none" }}>
       <article>
         {check === "footer" && (
           <section className={styles["post-container"]}>
@@ -26,14 +26,14 @@ const PostComponent = ({ check }) => {
         {check === "sidebar" && (
           <div className={`${styles["post-container"]} ${styles["hovering"]}`}>
             <div className={styles["text-container"]}>
-              <p className={styles["post-date-sidebar"]}>August 26, 2024</p>
-              <p className={styles["post-short-sidebar"]}>
-                Palestinians call off peace talks after clash
+              <p className={styles["post-date-sidebar"]}>
+                {new Date(date).toDateString()}
               </p>
+              <p className={styles["post-short-sidebar"]}>{title}</p>
             </div>
             <figure className={styles["image-container"]}>
               <img
-                src={image}
+                src={imageData}
                 alt="post-image"
                 className={styles["post-image"]}
               />
@@ -41,7 +41,7 @@ const PostComponent = ({ check }) => {
           </div>
         )}
       </article>
-    </a>
+    </Link>
   );
 };
 

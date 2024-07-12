@@ -2,13 +2,7 @@ import React from "react";
 import styles from "./CategoryCard.module.scss";
 
 import SingleNews from "../../generalComponents/singleNews/SingleNews";
-const CategoryCard = ({
-  title,
-  borderColor,
-  numberOfNews,
-  articles,
-  articleIndex,
-}) => {
+const CategoryCard = ({ title, borderColor, articles, articleIndex }) => {
   return (
     <main
       className={`${styles["news-card"]} ${styles["card-container"]}`}

@@ -1,13 +1,11 @@
 import React from "react";
 import styles from "./AddComment.module.scss";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 const AddComment = () => {
   const [userName, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [comment, setComment] = useState("");
-  const navigate = useNavigate();
   const commentSubmit = () => {
     const currentDateTime = new Date();
     const formattedDateTime = currentDateTime.toLocaleString();

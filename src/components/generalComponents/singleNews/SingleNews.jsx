@@ -20,7 +20,7 @@ const SingleNews = ({
       >
         <img
           src={image}
-          alt="forest"
+          alt="article-image"
           style={{
             width: `${imageWidth}px`,
             height: `${imageHeight}px`,

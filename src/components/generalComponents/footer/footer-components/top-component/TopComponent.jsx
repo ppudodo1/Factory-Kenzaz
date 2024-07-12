@@ -9,6 +9,21 @@ import twitter from "../../../../../assets/logos/twitter.png";
 import youtube from "../../../../../assets/logos/Youtube.png";
 import kenaz from "../../../../../assets/logos/kenaz1.png";
 
+let buttonText = [
+  "assueverit",
+  "utroquoe",
+  "probo",
+  "assuev",
+  "probo",
+  "assueverit",
+  "titl",
+  "assueverit",
+  "utroquoe",
+  "probo",
+  "assueverit",
+  "utroquoe",
+  "assueverit",
+];
 const TopComponent = () => {
   return (
     <div className={styles["footer-top-container"]}>
@@ -46,19 +61,9 @@ const TopComponent = () => {
       <section className={styles["tags-container"]}>
         <h2>Tags Widget</h2>
         <article className={styles["tags-button-container"]}>
-          <button>assueverit</button>
-          <button>utroquoe</button>
-          <button>probo</button>
-          <button>assuev</button>
-          <button>probo</button>
-          <button>assueverit</button>
-          <button>titl</button>
-          <button>assueverit</button>
-          <button>utroquoe</button>
-          <button>probo</button>
-          <button>assueverit</button>
-          <button>utroquoe</button>
-          <button>assueverit</button>
+          {buttonText.map((data, index) => (
+            <button>{data}</button>
+          ))}
         </article>
       </section>
     </div>

@@ -14,12 +14,12 @@ const Social = () => {
       </div>
       <div className={styles["media-container"]}>
         <img src={twitter} alt="twitter" />
-        <button>Like</button>
+        <button>Follow</button>
         <button>25041 Fans</button>
       </div>
       <div className={styles["media-container"]}>
         <img src={youtube} alt="youtube" />
-        <button>Like</button>
+        <button>Subscribe</button>
         <button>25041 Fans</button>
       </div>
     </article>
