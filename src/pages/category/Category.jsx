@@ -17,7 +17,7 @@ const Category = () => {
   const firstArticleIndex = useSelector(
     (state) => state.pagination.firstArticleIndex
   );
-  console.log("First article index: ", firstArticleIndex);
+
   const lastArticleIndex = useSelector(
     (state) => state.pagination.lastArticleIndex
   );

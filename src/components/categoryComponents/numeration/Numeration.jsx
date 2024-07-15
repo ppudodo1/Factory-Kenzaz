@@ -9,7 +9,6 @@ const Numeration = () => {
   const lastArticleIndex = useSelector(
     (state) => state.pagination.lastArticleIndex
   );
-  console.log("Last index: ", lastArticleIndex);
 
   const handleClick = (index) => {
     if (index * 5 < lastArticleIndex) {
