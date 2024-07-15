@@ -20,6 +20,7 @@ const Sidebar = ({ articles }) => {
                 imageData={data.image}
                 articleId={index}
                 date={data.publishedAt}
+                key={index}
               ></PostComponent>
             ))}
       </div>

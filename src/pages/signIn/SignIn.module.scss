@@ -1,0 +1,38 @@
+.sign-in-form-container {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sign-in-form-container input {
+  margin-top: 10px;
+  width: 200px;
+  height: 10px;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 16px;
+  outline: none;
+}
+.sign-in-button-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+.sign-in-button-container button {
+  width: 140px;
+  height: 25px;
+  background-color: white;
+  border: 1px solid rgb(64, 64, 64);
+  border-radius: 10px;
+  transition: 0.5s all;
+}
+.sign-in-button-container button:hover {
+  background-color: black;
+  color: white;
+  transform: translateY(-5px);
+}

@@ -67,6 +67,7 @@ const NewsSlider = ({
               imageWidth={imageWidth}
               imageHeight={imageHeight}
               articleId={articleIndex + index}
+              key={index}
             />
           ))
         ) : (

@@ -12,17 +12,18 @@ const Numeration = () => {
 
   const handleClick = (index) => {
     if (index * 5 < lastArticleIndex) {
+      console.log("Index is smaller");
       dispatch(
         changeIndex({
-          firstIndex: lastArticleIndex - 10,
-          lastIndex: lastArticleIndex - 5,
+          firstIndex: lastArticleIndex - (lastArticleIndex - index * 5),
+          lastIndex: lastArticleIndex - (lastArticleIndex / 5 - 1 - index) * 5,
         })
       );
     } else {
       dispatch(
         changeIndex({
-          firstIndex: index * 5 - 5,
-          lastIndex: index * 5,
+          firstIndex: index * 5,
+          lastIndex: index * 5 + 5,
         })
       );
     }

@@ -71,7 +71,7 @@ $container-height: 53px;
   }
 
   &.active::after {
-    background-color: var(--hover-color); /* Apply hover color permanently */
+    background-color: var(--hover-color);
   }
 }
 
@@ -120,4 +120,17 @@ $container-height: 53px;
 }
 .top-link:hover {
   color: $primary-color;
+}
+.log-out {
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #252525;
+  color: white;
+  transition: 0.5s all;
+}
+.log-out:hover {
+  background-color: white;
+  transform: translateY(-4px);
+  color: black;
 }

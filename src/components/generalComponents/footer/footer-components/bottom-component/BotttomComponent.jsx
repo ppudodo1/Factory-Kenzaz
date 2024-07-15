@@ -7,14 +7,14 @@ const BotttomComponent = () => {
     <footer className={styles["footer-bottom-container"]}>
       <section className={styles["featured-container"]}>
         <h2>Featured</h2>
-        {Array.from({ length: 3 }).map(() => (
-          <PostComponent check={"footer"} />
+        {Array.from({ length: 3 }).map((data, index) => (
+          <PostComponent check={"footer"} key={index} />
         ))}
       </section>
       <section className={styles["featured-container"]}>
         <h2>Random Posts</h2>
-        {Array.from({ length: 3 }).map(() => (
-          <PostComponent check={"footer"} />
+        {Array.from({ length: 3 }).map((data, index) => (
+          <PostComponent check={"footer"} key={index} />
         ))}
       </section>
       <aside className={styles["twitter-container"]}>

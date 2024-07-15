@@ -3,6 +3,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home.jsx";
 import Category from "./pages/category/Category.jsx";
 import Single from "./pages/single/Single.jsx";
+import SignIn from "./pages/signIn/SignIn.jsx";
+import LogIn from "./pages/logIn/LogIn.jsx";
+import UserProfile from "./pages/userProfile/UserProfile.jsx";
 function App() {
   return (
     <>
@@ -12,6 +15,12 @@ function App() {
           <Route path="/home" element={<Home></Home>}></Route>
           <Route path="/category/*" element={<Category></Category>}></Route>
           <Route path="/single/:articleId" element={<Single></Single>}></Route>
+          <Route path="/signIn" element={<SignIn></SignIn>}></Route>
+          <Route path="/login" element={<LogIn></LogIn>}></Route>
+          <Route
+            path="/userProfile"
+            element={<UserProfile></UserProfile>}
+          ></Route>
         </Routes>
       </BrowserRouter>
     </>

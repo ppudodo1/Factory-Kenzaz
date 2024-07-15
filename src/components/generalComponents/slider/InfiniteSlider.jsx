@@ -32,7 +32,7 @@ const InfiniteSlider = ({ articles }) => {
     <section className={styles["slider-container"]}>
       <Slider {...settings}>
         {articles.map((article, index) => (
-          <article className={styles["slider-item-container"]}>
+          <article className={styles["slider-item-container"]} key={index}>
             <img src={article.image} alt="article-image" />
             <div className={styles["slider-txt-container"]}>
               <div className={styles["slider-par-container"]}>

@@ -62,7 +62,7 @@ const TopComponent = () => {
         <h2>Tags Widget</h2>
         <article className={styles["tags-button-container"]}>
           {buttonText.map((data, index) => (
-            <button>{data}</button>
+            <button key={index}>{data}</button>
           ))}
         </article>
       </section>

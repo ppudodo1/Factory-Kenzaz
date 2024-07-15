@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Header.module.scss";
 import logo from "../../../assets/logos/VectorSmartObject1.png";
 import searchLogo from "../../../assets/logos/searchIcon.png";
 import { Link, useLocation } from "react-router-dom";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import { auth } from "../../../firebase/firebase.js";
 
 const buttonColors = {
   news: "#299EC3",
@@ -14,6 +16,28 @@ const buttonColors = {
 };
 
 const Header = () => {
+  const [authUser, setAuthUser] = useState(null);
+  useEffect(() => {
+    const listen = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setAuthUser(user);
+      } else {
+        setAuthUser(null);
+      }
+    });
+    return () => {
+      listen();
+    };
+  }, []);
+  const userSignOut = () => {
+    signOut(auth)
+      .then(() => {
+        console.log("Sign out successful");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   const location = useLocation();
 
   return (
@@ -40,6 +64,25 @@ const Header = () => {
             <a href="" className={styles["top-link"]}>
               Contact
             </a>
+            {authUser ? (
+              <>
+                <a href="/userProfile" className={styles["top-link"]}>
+                  {authUser.email}
+                </a>
+                <button onClick={userSignOut} className={styles["log-out"]}>
+                  Log out
+                </button>
+              </>
+            ) : (
+              <>
+                <a href="/login" className={styles["top-link"]}>
+                  Login
+                </a>
+                <a href="/signIn" className={styles["top-link"]}>
+                  Sign up
+                </a>
+              </>
+            )}
             <div className={styles["search-icon"]}>
               <img src={searchLogo} alt="searchLogo" />
             </div>
