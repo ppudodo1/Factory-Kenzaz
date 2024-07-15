@@ -14,6 +14,13 @@ const Category = () => {
   const dispatch = useDispatch();
   const articles = useSelector((state) => state.news.articles);
   const newsStatus = useSelector((state) => state.news.status);
+  const firstArticleIndex = useSelector(
+    (state) => state.pagination.firstArticleIndex
+  );
+  console.log("First article index: ", firstArticleIndex);
+  const lastArticleIndex = useSelector(
+    (state) => state.pagination.lastArticleIndex
+  );
   useEffect(() => {
     if (newsStatus === "idle") {
       dispatch(fetchNews());
@@ -34,11 +41,11 @@ const Category = () => {
           </div>
           {articles && articles.length > 0 ? (
             articles
-              .slice(0, 5)
+              .slice(firstArticleIndex, lastArticleIndex)
               .map((data, index) => (
                 <NewsComponent
                   article={data}
-                  articleId={index}
+                  articleId={firstArticleIndex + index}
                   key={index}
                 ></NewsComponent>
               ))
