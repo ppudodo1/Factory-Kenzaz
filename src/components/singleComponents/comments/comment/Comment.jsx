@@ -3,15 +3,18 @@ import styles from "./Comment.module.scss";
 import avatar from "../../../../assets/logos/avatar.png";
 import Reply from "../reply/Reply";
 import RepliedComment from "../repliedComment/RepliedComment";
+import { useSelector } from "react-redux";
+
 const Comment = ({ userName, date, comment, id }) => {
+  const comments = useSelector((state) => state.comments.arrOfComments);
+
   const [replied, setReplied] = useState(false);
-  const [checkReply, setCheckReply] = useState(false);
+  const [showReply, setShowReply] = useState(false);
   const [repliedComments, setRepliedComments] = useState([]);
   const [thisComment, setThisComment] = useState(null);
-
+  const userLoggedIn = useSelector((state) => state.user.user);
   const checkForReplies = () => {
-    let commentsArr = JSON.parse(localStorage.getItem("comments")) || [];
-    let thisComment = commentsArr[id];
+    let thisComment = comments.find((comment) => comment.id === id);
     if (
       thisComment &&
       thisComment.replyComment &&
@@ -25,7 +28,12 @@ const Comment = ({ userName, date, comment, id }) => {
 
   useEffect(() => {
     checkForReplies();
-  }, [checkReply]);
+  }, [comments]);
+
+  const handleReplySubmit = () => {
+    setShowReply(false);
+    checkForReplies();
+  };
 
   return (
     <div className={styles["comment-container"]}>
@@ -38,16 +46,18 @@ const Comment = ({ userName, date, comment, id }) => {
             <h1>{userName}</h1>
             <p>{date}</p>
           </div>
-          <button onClick={() => setCheckReply(!checkReply)}>Reply</button>
+          {userLoggedIn && Object.keys(userLoggedIn).length > 0 && (
+            <button onClick={() => setShowReply(!showReply)}>Reply</button>
+          )}
         </div>
         <div className={styles["comment-text-container"]}>
           <p>{comment}</p>
         </div>
         {replied &&
           repliedComments.map((e, index) => (
-            <RepliedComment autor={e.name} comment={e.comment}></RepliedComment>
+            <RepliedComment key={index} autor={e.name} comment={e.comment} />
           ))}
-        {checkReply && <Reply id={id}></Reply>}
+        {showReply && <Reply id={id} onReplySubmit={handleReplySubmit} />}
       </div>
     </div>
   );

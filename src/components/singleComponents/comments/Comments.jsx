@@ -2,40 +2,55 @@ import React from "react";
 import styles from "./Comments.module.scss";
 import Comment from "./comment/Comment";
 import AddComment from "./addComment/AddComment";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { useParams } from "react-router";
-let commentsArr = JSON.parse(localStorage.getItem("comments")) || [];
 
 const Comments = () => {
   const comments = useSelector((state) => state.comments.arrOfComments);
+  const userLoggedIn = useSelector((state) => state.user.user);
+  console.log("Check if logged in: ", userLoggedIn);
   const { articleId } = useParams();
-  if (commentsArr.length == 0) {
+
+  if (comments.length === 0) {
     return (
       <div className={styles["comments-outer-container"]}>
         <h1>Comments</h1>
         <p>No comments yet</p>
-        <AddComment></AddComment>
+        {userLoggedIn && Object.keys(userLoggedIn).length > 0 ? (
+          <AddComment articleId={articleId} />
+        ) : (
+          <div className={styles["logged-out-comment"]}>
+            <p>Log in or sign up to post a comment</p>
+          </div>
+        )}
       </div>
     );
   }
+
   return (
     <div className={styles["comments-outer-container"]}>
       <h1>Comments</h1>
       <div className={styles["comments-inner-container"]}>
-        {commentsArr.map((comment, index) => {
+        {comments.map((comment) => {
           if (comment.articleId == articleId) {
             return (
               <Comment
                 userName={comment.user}
                 date={comment.date}
                 comment={comment.userComment}
-                key={index}
-                id={index}
-              ></Comment>
+                key={comment.id}
+                id={comment.id}
+              />
             );
           }
         })}
-        <AddComment articleId={articleId}></AddComment>
+        {userLoggedIn && Object.keys(userLoggedIn).length > 0 ? (
+          <AddComment articleId={articleId} />
+        ) : (
+          <div className={styles["logged-out-comment"]}>
+            <p>Log in or sign up to post a comment</p>
+          </div>
+        )}
       </div>
     </div>
   );

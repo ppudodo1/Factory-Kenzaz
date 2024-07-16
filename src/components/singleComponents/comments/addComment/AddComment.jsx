@@ -1,39 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./AddComment.module.scss";
-import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addComment } from "../../../../features/storedComments/commentsSlice";
+
 const AddComment = ({ articleId }) => {
   const [userName, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [comment, setComment] = useState("");
+  const [errors, setErrors] = useState({});
   const dispatch = useDispatch();
   const comments = useSelector((state) => state.comments.arrOfComments);
-  const commentSubmit = () => {
-    const currentDateTime = new Date();
-    const formattedDateTime = currentDateTime.toLocaleString();
-    let commentObj = {
-      user: userName,
-      userEmail: email,
-      userComment: comment,
-      date: formattedDateTime,
-      replyComments: [],
-    };
-    dispatch(
-      addComment({
-        userName,
-        email,
-        comment,
-        replyComments: [],
-        formattedDateTime,
-        articleId,
-      })
-    );
-    setUsername("");
-    setEmail("");
-    setComment("");
-    window.location.reload();
+  const userEmail = useSelector((state) => state.user.user.email);
+  const userDisplayName = useSelector((state) => state.user.user.displayName);
+  const validateForm = () => {
+    const newErrors = {};
+
+    if (!comment) newErrors.comment = "Comment is required";
+    return newErrors;
   };
+  const cancelComment = () => {
+    setUsername("");
+    setComment("");
+    setEmail("");
+  };
+  const commentSubmit = (e) => {
+    e.preventDefault();
+    const newErrors = validateForm();
+    if (Object.keys(newErrors).length === 0) {
+      const currentDateTime = new Date();
+      const formattedDateTime = currentDateTime.toLocaleString();
+      dispatch(
+        addComment({
+          userDisplayName,
+          userEmail,
+          comment,
+          replyComments: [],
+          formattedDateTime,
+          articleId,
+        })
+      );
+      setUsername("");
+      setEmail("");
+      setComment("");
+      setErrors({});
+    } else {
+      setErrors(newErrors);
+    }
+  };
+
   return (
     <div className={styles["add-comment-container"]}>
       <h1>Add your Comment</h1>
@@ -43,19 +57,14 @@ const AddComment = ({ articleId }) => {
         egestas, augue vel suspendisse. Et felis venenatis blandit sed est
         ultrices, adipiscing urna.
       </p>
-      <div className={styles["comment-input"]}>
-        <input
-          type="text"
-          placeholder="Name"
-          value={userName}
-          onChange={(e) => setUsername(e.target.value)}
-        />
-        <input
-          type="email"
-          placeholder="Email Address"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
+      <form onSubmit={commentSubmit} className={styles["comment-input"]}>
+        {errors.userName && (
+          <p className={styles["error-message"]}>{errors.userName}</p>
+        )}
+
+        {errors.email && (
+          <p className={styles["error-message"]}>{errors.email}</p>
+        )}
         <textarea
           name="comment"
           id=""
@@ -63,8 +72,14 @@ const AddComment = ({ articleId }) => {
           value={comment}
           onChange={(e) => setComment(e.target.value)}
         ></textarea>
-        <button onClick={commentSubmit}>Submit</button>
-      </div>
+        {errors.comment && (
+          <p className={styles["error-message"]}>{errors.comment}</p>
+        )}
+        <div className={styles["add-comment-button-container"]}>
+          <button type="submit">Submit</button>
+          <button onClick={cancelComment}>Cancel</button>
+        </div>
+      </form>
     </div>
   );
 };

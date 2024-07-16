@@ -14,7 +14,6 @@ import { useEffect } from "react";
 import { useParams } from "react-router";
 const Single = () => {
   const { articleId } = useParams();
-  console.log("Params: ", articleId);
   const dispatch = useDispatch();
   const articles = useSelector((state) => state.news.articles);
   const newsStatus = useSelector((state) => state.news.status);

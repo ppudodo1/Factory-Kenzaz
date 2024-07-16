@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./NewsComponent.module.scss";
 import image from "../../../assets/logos/Layer59.png";
 import { Link } from "react-router-dom";
+import getCurDate from "../../../app/gettingDate";
 const NewsComponent = ({ article, articleId }) => {
   if (!article) {
     return <div>Loading...</div>;
@@ -10,7 +11,7 @@ const NewsComponent = ({ article, articleId }) => {
     <div className={styles["news-container"]}>
       <h1>{article.title}</h1>
       <div className={styles["info-container"]}>
-        <p>{new Date(article.publishedAt).toDateString()}</p>
+        <p>{getCurDate()}</p>
         <p>Author: Matej Sudar</p>
         <p>12 comments</p>
       </div>

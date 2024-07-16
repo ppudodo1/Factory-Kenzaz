@@ -8,23 +8,26 @@ import Footer from "../../components/generalComponents/footer/Footer.jsx";
 const LogIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loginError, setLoginError] = useState(false);
   const navigate = useNavigate();
   const handleClick = (e) => {
     e.preventDefault();
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredentials) => {
         console.log(userCredentials);
+        navigate("/");
       })
       .catch((error) => {
         console.log(error);
+        setLoginError(true);
       });
-    navigate("/");
   };
   return (
     <div>
       <Header></Header>
       <div className={styles["login-form-container"]}>
         <h1>Login</h1>
+        {loginError && <p>Username or password is wrong</p>}
         <form action="">
           <input
             type="text"

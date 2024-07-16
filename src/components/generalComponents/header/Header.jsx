@@ -5,7 +5,8 @@ import searchLogo from "../../../assets/logos/searchIcon.png";
 import { Link, useLocation } from "react-router-dom";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../../../firebase/firebase.js";
-
+import { useDispatch } from "react-redux";
+import { addUser, logOut } from "../../../features/loggedUser/userSlice.js";
 const buttonColors = {
   news: "#299EC3",
   business: "#EE6151",
@@ -17,21 +18,24 @@ const buttonColors = {
 
 const Header = () => {
   const [authUser, setAuthUser] = useState(null);
+  const dispatch = useDispatch();
   useEffect(() => {
     const listen = onAuthStateChanged(auth, (user) => {
+      setAuthUser(user);
       if (user) {
-        setAuthUser(user);
+        dispatch(addUser(user));
       } else {
-        setAuthUser(null);
+        dispatch(addUser({}));
       }
     });
     return () => {
       listen();
     };
-  }, []);
+  }, [dispatch]);
   const userSignOut = () => {
     signOut(auth)
       .then(() => {
+        dispatch(logOut());
         console.log("Sign out successful");
       })
       .catch((error) => {
@@ -67,7 +71,7 @@ const Header = () => {
             {authUser ? (
               <>
                 <a href="/userProfile" className={styles["top-link"]}>
-                  {authUser.email}
+                  {authUser.displayName}
                 </a>
                 <button onClick={userSignOut} className={styles["log-out"]}>
                   Log out
