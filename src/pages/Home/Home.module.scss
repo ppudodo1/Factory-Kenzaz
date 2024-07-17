@@ -8,7 +8,8 @@
   height: 1000px;
 }
 .main-container {
-  width: 940px;
+  width: 100%;
+  max-width: 940px;
   margin: 0 auto;
   display: flex;
   gap: 20px;
@@ -28,4 +29,19 @@
 .editorials-container {
   display: flex;
   justify-content: space-between;
+}
+@media (max-width: 850px) {
+  .main-right-container {
+    display: none;
+  }
+  .main-left-container {
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .editorials-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }

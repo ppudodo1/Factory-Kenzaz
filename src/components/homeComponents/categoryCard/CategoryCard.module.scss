@@ -1,5 +1,6 @@
 .card-container {
-  width: 610px;
+  width: 100%;
+  max-width: 610px;
   background-color: white;
   margin-top: 20px;
   display: flex;
@@ -15,7 +16,6 @@
   justify-content: space-between;
   margin-top: 30px;
 }
-
 .card-text {
   display: flex;
   justify-content: space-between;
@@ -32,4 +32,30 @@
   font-family: "Varela Round", sans-serif;
   font-size: 14px;
   margin-top: 15px;
+}
+@media (max-width: 930px) {
+  .multiple-card-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card-container {
+    height: 530px;
+  }
+}
+@media (max-width: 850px) {
+  .card-container {
+    width: 100%;
+    height: 1200px;
+    max-width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .card-container {
+    height: 800px;
+  }
+}
+@media (max-width: 380px) {
+  .card-container {
+    height: 700px;
+  }
 }

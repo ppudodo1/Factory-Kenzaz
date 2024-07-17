@@ -3,11 +3,17 @@
   justify-content: space-between;
   margin-left: 15px !important;
   margin-bottom: 10px !important;
-  width: 910px;
+  width: 100%;
+  max-width: 910px;
   height: 120px;
   padding: 0;
   list-style: none;
   bottom: 10px;
+
+  overflow: hidden;
+}
+.slick-thumb {
+  overflow: hidden;
 }
 .slick-dots li {
   width: 120px !important;

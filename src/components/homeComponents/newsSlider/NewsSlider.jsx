@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./NewsSlider.module.scss";
 import Slider from "react-slick";
 
@@ -18,6 +18,8 @@ const NewsSlider = ({
   articles,
   articleIndex,
 }) => {
+  const [currentSlidesToShow, setCurrentSlidesToShow] = useState(slidesToShow);
+  const [smallWindow, setSmallWindow] = useState(false);
   let sliderRef = useRef(null);
   const next = () => {
     sliderRef.slickNext();
@@ -28,10 +30,26 @@ const NewsSlider = ({
   const settings = {
     infinite: true,
     speed: 500,
-    slidesToShow: slidesToShow,
-    slidesToScroll: slidesToShow,
+    slidesToShow: currentSlidesToShow,
+    slidesToScroll: currentSlidesToShow,
+  };
+  const updateSlidesToShow = () => {
+    if (window.innerWidth <= 600) {
+      setCurrentSlidesToShow(1);
+      setSmallWindow(true);
+    } else {
+      setCurrentSlidesToShow(slidesToShow);
+      setSmallWindow(false);
+    }
   };
 
+  useEffect(() => {
+    updateSlidesToShow();
+    window.addEventListener("resize", updateSlidesToShow);
+    return () => {
+      window.removeEventListener("resize", updateSlidesToShow);
+    };
+  }, [slidesToShow]);
   return (
     <section
       className={styles["slider-container"]}
@@ -64,7 +82,7 @@ const NewsSlider = ({
               image={data.image}
               date={new Date(data.publishedAt).toDateString()}
               title={data.title}
-              imageWidth={imageWidth}
+              imageWidth={smallWindow ? 300 : imageWidth}
               imageHeight={imageHeight}
               articleId={articleIndex + index}
               key={index}

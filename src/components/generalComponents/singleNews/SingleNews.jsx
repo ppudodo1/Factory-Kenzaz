@@ -10,8 +10,13 @@ const SingleNews = ({
   imageHeight,
   articleId,
 }) => {
+  console.log("Image Width: ", imageWidth);
   return (
-    <Link to={`/single/${articleId}`} style={{ textDecoration: "none" }}>
+    <Link
+      to={`/single/${articleId}`}
+      style={{ textDecoration: "none" }}
+      className={styles["single-card-link"]}
+    >
       <div
         className={styles["single-card"]}
         style={{

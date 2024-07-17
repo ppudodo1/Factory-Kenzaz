@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../../components/generalComponents/header/Header.jsx";
 import Footer from "../../components/generalComponents/footer/Footer.jsx";
 import styles from "./Home.module.scss";
@@ -19,13 +19,26 @@ const Home = () => {
   const dispatch = useDispatch();
   const articles = useSelector((state) => state.news.articles);
   const newsStatus = useSelector((state) => state.news.status);
-
+  const [currentEditorialsWidth, setCurrentEditorialsWidth] = useState(false);
+  const updateEditorialsWidth = () => {
+    if (window.innerWidth <= 600) {
+      setCurrentEditorialsWidth(true);
+    } else {
+      setCurrentEditorialsWidth(false);
+    }
+  };
   useEffect(() => {
-    //test();
     if (newsStatus === "idle") {
       dispatch(fetchNews());
     }
   }, [newsStatus, dispatch]);
+  useEffect(() => {
+    updateEditorialsWidth();
+    window.addEventListener("resize", updateEditorialsWidth);
+    return () => {
+      window.removeEventListener("resize", updateEditorialsWidth);
+    };
+  });
   if (newsStatus === "loading") {
     return <div>Loading...</div>;
   }
@@ -74,7 +87,7 @@ const Home = () => {
             <NewsSlider
               slidesToShow={1}
               title={"Editorials"}
-              passedWidth={46}
+              passedWidth={currentEditorialsWidth ? 100 : 46}
               borderColor={"#A99765"}
               arrowLeft={leftArrowBottom}
               arrowRight={rightArrowBottom}
@@ -86,7 +99,7 @@ const Home = () => {
             <NewsSlider
               slidesToShow={1}
               title={"Local News"}
-              passedWidth={46}
+              passedWidth={currentEditorialsWidth ? 100 : 46}
               borderColor={"#A99765"}
               arrowLeft={leftArrowBottom}
               arrowRight={rightArrowBottom}

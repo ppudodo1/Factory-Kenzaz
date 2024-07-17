@@ -6,7 +6,8 @@ const Banner = ({ width, height, center, top, bottom }) => {
       className={styles["banner-container"]}
       style={{
         height: `${height}px`,
-        width: `${width}px`,
+        width: `100%`,
+        maxWidth: `${width}px`,
         margin: `0 ${center}`,
         marginTop: `${top}px`,
         marginBottom: `${bottom}px`,

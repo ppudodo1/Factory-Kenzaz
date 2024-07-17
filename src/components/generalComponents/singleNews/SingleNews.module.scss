@@ -6,9 +6,6 @@
   margin: 0 auto;
 }
 .single-card img {
-  width: 170px;
-  height: 128px;
-  object-fit: cover;
 }
 .single-card p:first-of-type {
   text-decoration: none;
@@ -23,4 +20,25 @@
   color: #363f48;
   font-family: "Bitter";
   text-decoration: none;
+}
+@media (max-width: 850px) {
+  .single-card {
+    width: 400px;
+  }
+  .single-card img {
+    width: 100%;
+  }
+  .single-card-link {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 740px) {
+  .single-card {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .single-card img {
+    width: 100%;
+  }
 }
