@@ -11,7 +11,12 @@ $container-height: 53px;
   display: flex;
   gap: 1rem;
 }
-
+.mobile-nav {
+  display: none;
+}
+.invisible {
+  display: none !important;
+}
 .header-outside-container {
   background-color: $secondary-color;
 }
@@ -82,7 +87,7 @@ $container-height: 53px;
   gap: 2rem;
 }
 
-.top-link-container a {
+.top-link {
   color: white;
   text-decoration: none;
   font-size: 14px;
@@ -133,4 +138,79 @@ $container-height: 53px;
   background-color: white;
   transform: translateY(-4px);
   color: black;
+}
+
+@media (max-width: 992px) {
+  .button-link {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .top-link-container {
+    display: none;
+  }
+  .mobile-nav {
+    display: block;
+    height: 53px;
+    width: 54px;
+    border: none;
+    background-color: #252525;
+  }
+  .header-inside-top-container {
+    transition: 0.3s all;
+  }
+  .header-inside-top-container-mobile {
+    transition: 0.3s all;
+    height: 300px;
+  }
+  .search-icon {
+    width: 31px;
+    height: 31px;
+  }
+  .logo-container {
+    gap: 1rem;
+  }
+
+  .visible {
+    display: flex;
+    flex-direction: column;
+  }
+  .header-inside-bottom-container {
+    display: none;
+  }
+  .button-link {
+    height: 40px;
+    font-size: 18px;
+  }
+  .inner-logo {
+    width: 53px;
+    height: 53px;
+  }
+  .logo-container {
+    gap: 0.2rem;
+  }
+  .header-title {
+    margin-top: 13px;
+    font-size: 18px;
+  }
+  .logo-container-nav {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+  }
+  .top-link {
+    width: 50px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+  .search-icon {
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  .log-out {
+    width: 70px;
+  }
 }
