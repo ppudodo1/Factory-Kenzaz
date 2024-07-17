@@ -12,7 +12,7 @@ $color-light-gray: #cccccc;
 
 .footer-bottom-container {
   display: flex;
-  width: $container-width;
+  max-width: $container-width;
   margin: $margin-auto;
 }
 
@@ -56,4 +56,9 @@ $color-light-gray: #cccccc;
   color: $color-light-gray;
   text-align: $text-align-left;
   width: 326px;
+}
+@media (max-width: 768px) {
+  .footer-bottom-container {
+    flex-direction: column;
+  }
 }

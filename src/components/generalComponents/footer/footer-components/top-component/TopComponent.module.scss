@@ -105,3 +105,63 @@ $kenzaz-title-clr: #45b0e3;
   display: flex;
   flex-wrap: wrap;
 }
+@media (max-width: 768px) {
+  .footer-top-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .kenaz-image-container {
+    display: flex;
+    justify-content: center;
+  }
+  .kenaz-image-container h2 {
+    font-size: 20px;
+  }
+  .kenaz-image-container img {
+    height: 30px;
+  }
+  .kenaz-text-par {
+    font-size: 12px;
+    width: 200px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .icon-container img {
+    width: 30px;
+    height: 30px;
+  }
+  .newsletter-container h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+  .newsletter-container p {
+    font-size: 12px;
+    width: 200px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .newsletter-container input {
+    width: 130px;
+    height: 30px;
+  }
+  .newsletter-container button {
+    width: 90px;
+    height: 30px;
+  }
+  .tags-container {
+    justify-content: center;
+    align-items: center;
+  }
+  .tags-container h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+  .tags-container button {
+    font-size: 12px;
+  }
+  .tags-button-container {
+    justify-content: center;
+    align-items: center;
+  }
+}
