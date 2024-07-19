@@ -12,7 +12,11 @@ const FullArticle = ({ content }) => {
         <p>{content}</p>
       </article>
       <article>
-        <img src={image} alt="articleImage" />
+        <img
+          src={image}
+          alt="articleImage"
+          className={styles["full-article-image"]}
+        />
       </article>
       <article className={styles["row-of-article"]}>
         <p>

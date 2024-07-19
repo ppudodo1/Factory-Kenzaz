@@ -47,7 +47,7 @@ const Single = () => {
           <Author></Author>
           <Comments articleId={articleId}></Comments>
         </main>
-        <aside className={styles["main-right-contaier"]}>
+        <aside className={styles["main-right-container"]}>
           <SideContent articles={articles}></SideContent>
         </aside>
       </div>

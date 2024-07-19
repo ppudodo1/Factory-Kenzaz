@@ -1,13 +1,18 @@
 .hero-container {
-  width: 940px;
+  width: 100%;
+  max-width: 940px;
+  height: 425px;
   margin: 0 auto;
   margin-top: 20px;
 }
 .hero-item-container {
   position: relative;
+  max-width: 940px;
+  height: 425px;
 }
 .hero-item-container img {
   width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 .slider-txt-container {
@@ -16,8 +21,6 @@
   padding-bottom: 20px;
   padding-top: 20px;
   z-index: 1;
-  /*background-image: url('../../assets/logos/Layer31.png');
-      background-position: center;*/
   background: linear-gradient(
     to top,
     rgba(255, 255, 255, 1) 0%,
@@ -46,7 +49,7 @@
 .slider-title-container {
   position: relative;
   left: 2%;
-  width: 558px;
+  width: 100%;
 }
 .slider-title-container h1 {
   color: #222222;
@@ -62,4 +65,40 @@
   border: 1px solid #eef6fa;
   color: #eef6fa;
   font-size: 14px;
+}
+@media (max-width: 995px) {
+  .hero-container {
+    width: 95% !important	;
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider-title-container h1 {
+    font-size: 28px;
+    width: 70%;
+  }
+}
+@media (max-width: 480px) {
+  .slider-title-container h1 {
+    font-size: 22px;
+    width: 60%;
+    max-width: 203px;
+  }
+  .slider-title-container button {
+    width: 83px;
+    height: 23px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 320px) {
+  .slider-title-container h1 {
+    font-size: 16px;
+    width: 80%;
+    max-width: 303px;
+  }
+  .slider-title-container button {
+    width: 83px;
+    height: 23px;
+  }
 }
