@@ -14,6 +14,34 @@ function App() {
           <Route index element={<Home></Home>}></Route>
           <Route path="/home" element={<Home></Home>}></Route>
           <Route path="/category/*" element={<Category></Category>}></Route>
+          <Route
+            path="/category/news/:index"
+            element={<Category></Category>}
+          ></Route>
+          <Route
+            path="/category/business/:index"
+            element={<Category></Category>}
+          ></Route>
+          <Route
+            path="/category/sport/:index"
+            element={<Category></Category>}
+          ></Route>
+          <Route
+            path="/category/life/:index"
+            element={<Category></Category>}
+          ></Route>
+          <Route
+            path="/category/tech/:index"
+            element={<Category></Category>}
+          ></Route>
+          <Route
+            path="/category/travel/:index"
+            element={<Category></Category>}
+          ></Route>
+          <Route
+            path="/category/news/:index"
+            element={<Category></Category>}
+          ></Route>
           <Route path="/single/:articleId" element={<Single></Single>}></Route>
           <Route path="/signIn" element={<SignIn></SignIn>}></Route>
           <Route path="/login" element={<LogIn></LogIn>}></Route>

@@ -17,3 +17,14 @@
   background-color: #4d4382;
   color: white;
 }
+.numbers-container button:focus {
+  background-color: #4d4382;
+  color: white;
+}
+@media (max-width: 560px) {
+  .numbers-container button {
+    width: 23px;
+    height: 23px;
+    font-size: 12px;
+  }
+}

@@ -74,11 +74,15 @@
 }
 @media (max-width: 970px) {
   .image-holder {
-    width: 80px;
-    height: 80px;
+    display: none;
   }
   .image-holder img {
     width: 80px;
     height: 80px;
+  }
+}
+@media (max-width: 970px) {
+  .paging-slider-container {
+    width: 95%;
   }
 }

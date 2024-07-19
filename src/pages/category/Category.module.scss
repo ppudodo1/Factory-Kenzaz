@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
+  overflow: hidden;
 }
 .main-container {
   width: 100%;
@@ -27,6 +28,9 @@
   font-family: "Bitter";
 }
 @media (max-width: 850px) {
+  .main-container {
+    width: 95%;
+  }
   .main-right-container {
     display: none;
   }

@@ -10,14 +10,17 @@ import Numeration from "../../components/categoryComponents/numeration/Numeratio
 import { useDispatch, useSelector } from "react-redux";
 import { fetchNews } from "../../features/news/newsSlice.js";
 import { useEffect } from "react";
+import { useParams } from "react-router";
+import { changeIndex } from "../../features/pagination/paginationSlice.js";
 const Category = () => {
   const dispatch = useDispatch();
+  const { index } = useParams();
+
   const articles = useSelector((state) => state.news.articles);
   const newsStatus = useSelector((state) => state.news.status);
   const firstArticleIndex = useSelector(
     (state) => state.pagination.firstArticleIndex
   );
-
   const lastArticleIndex = useSelector(
     (state) => state.pagination.lastArticleIndex
   );
@@ -25,7 +28,13 @@ const Category = () => {
     if (newsStatus === "idle") {
       dispatch(fetchNews());
     }
-  }, [newsStatus, dispatch]);
+    dispatch(
+      changeIndex({
+        firstIndex: Number(index) * 5,
+        lastIndex: Number(index) * 5 + 5,
+      })
+    );
+  }, [newsStatus, dispatch, index]);
   if (newsStatus === "loading" && articles == undefined) {
     return <div>Loading...</div>;
   }

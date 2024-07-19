@@ -172,7 +172,7 @@ const Header = () => {
           {Object.entries(buttonColors).map(([key, color]) => (
             <Link
               key={key}
-              to={`/category/${key}`}
+              to={`/category/${key}/0`}
               className={styles["button-link"]}
               style={{
                 borderBottomColor: color,

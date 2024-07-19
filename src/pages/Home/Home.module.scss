@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
+  overflow: hidden;
 }
 .spacing {
   height: 1000px;
@@ -30,12 +31,18 @@
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 960px) {
+  .main-container {
+    width: 95%;
+  }
+}
 @media (max-width: 850px) {
   .main-right-container {
     display: none;
   }
   .main-left-container {
-    width: 100%;
+    width: 100% !important;
+    margin: 0 auto;
   }
 }
 @media (max-width: 600px) {

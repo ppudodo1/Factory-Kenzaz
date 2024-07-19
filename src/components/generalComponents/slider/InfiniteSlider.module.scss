@@ -75,6 +75,13 @@
   color: #eef6fa;
   font-size: 14px;
 }
+@media (max-width: 960px) {
+  .slider-container {
+    width: 95% !important	;
+    max-width: 100% !important;
+  }
+}
+
 @media (max-width: 768px) {
   .slider-title-container h1 {
     font-size: 28px;

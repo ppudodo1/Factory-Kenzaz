@@ -6,6 +6,7 @@
   margin: 0 auto;
 }
 .single-card img {
+  height: 90px;
 }
 .single-card p:first-of-type {
   text-decoration: none;
@@ -27,6 +28,7 @@
   }
   .single-card img {
     width: 100%;
+    height: fit-content;
   }
   .single-card-link {
     width: 80%;
