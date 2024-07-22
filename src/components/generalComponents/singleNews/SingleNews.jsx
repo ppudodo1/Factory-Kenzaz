@@ -10,7 +10,6 @@ const SingleNews = ({
   imageHeight,
   articleId,
 }) => {
-  console.log("Image Width: ", imageWidth);
   return (
     <Link
       to={`/single/${articleId}`}

@@ -6,6 +6,7 @@ import leftArrow from "../../../assets/logos/Shape1.png";
 import rightArrow from "../../../assets/logos/Shape2.png";
 import SingleNews from "../../generalComponents/singleNews/SingleNews";
 import { Link } from "react-router-dom";
+
 const NewsSlider = ({
   slidesToShow,
   title,
@@ -20,19 +21,24 @@ const NewsSlider = ({
 }) => {
   const [currentSlidesToShow, setCurrentSlidesToShow] = useState(slidesToShow);
   const [smallWindow, setSmallWindow] = useState(false);
+  const [currentImageWidth, setCurrentImageWidth] = useState(imageWidth);
   let sliderRef = useRef(null);
+
   const next = () => {
     sliderRef.slickNext();
   };
+
   const previous = () => {
     sliderRef.slickPrev();
   };
+
   const settings = {
     infinite: true,
     speed: 500,
     slidesToShow: currentSlidesToShow,
     slidesToScroll: currentSlidesToShow,
   };
+
   const updateSlidesToShow = () => {
     if (window.innerWidth <= 600) {
       setCurrentSlidesToShow(1);
@@ -40,6 +46,12 @@ const NewsSlider = ({
     } else {
       setCurrentSlidesToShow(slidesToShow);
       setSmallWindow(false);
+    }
+
+    if (window.innerWidth <= 400) {
+      setCurrentImageWidth(200);
+    } else {
+      setCurrentImageWidth(imageWidth);
     }
   };
 
@@ -49,7 +61,8 @@ const NewsSlider = ({
     return () => {
       window.removeEventListener("resize", updateSlidesToShow);
     };
-  }, [slidesToShow]);
+  }, [slidesToShow, imageWidth]);
+
   return (
     <section
       className={styles["slider-container"]}
@@ -82,7 +95,7 @@ const NewsSlider = ({
               image={data.image}
               date={new Date(data.publishedAt).toDateString()}
               title={data.title}
-              imageWidth={smallWindow ? 300 : imageWidth}
+              imageWidth={smallWindow ? currentImageWidth : imageWidth}
               imageHeight={imageHeight}
               articleId={articleIndex + index}
               key={index}

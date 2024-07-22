@@ -13,7 +13,7 @@ const CategoryCard = ({ title, borderColor, articles, articleIndex }) => {
       <div className={styles["main-news-container"]}>
         <div className={styles["card-text"]}>
           <h1>{title}</h1>
-          <a href="/category">See all</a>
+          <a href="/category/news/0">See all</a>
         </div>
         <div className={styles["multiple-card-container"]}>
           {articles && articles.length > 0 ? (
